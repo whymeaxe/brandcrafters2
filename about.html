@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About BrandCrafters – Our Story, Mission & Team | Vadodara Digital Marketing Agency</title>
+    <meta name="description" content="Learn about BrandCrafters — Vadodara's social media marketing and brand promotion agency. Our story, mission, values, and the team behind 1,500+ business growth campaigns.">
+    <meta name="keywords" content="about BrandCrafters, digital marketing agency Vadodara, social media agency team, brand promotion Gujarat, BrandCrafters story">
+    <meta name="author" content="BrandCrafters">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://brandcrafters.in/about.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://brandcrafters.in/about.html">
+    <meta property="og:title" content="About BrandCrafters – Our Story, Mission & Team">
+    <meta property="og:description" content="The team and story behind Vadodara's leading social media marketing and brand promotion agency.">
+    <meta property="og:site_name" content="BrandCrafters">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;}
+        :root{--bg:#f4ede4;--bg-alt:#ebe2d5;--bg-dark:#2a2520;--text:#1a1a1a;--text-light:#f4ede4;--muted:#6b6358;--accent:#c9542a;--border:rgba(26,26,26,0.1);}
+        html{scroll-behavior:smooth;font-size:16px;background:var(--bg);}
+        body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased;line-height:1.5;}
+        ::selection{background:var(--accent);color:var(--text-light);}
+        ::-webkit-scrollbar{width:8px;} ::-webkit-scrollbar-track{background:var(--bg);} ::-webkit-scrollbar-thumb{background:#c9bda9;border-radius:4px;}
+
+        nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.25rem 2.5rem;display:flex;justify-content:space-between;align-items:center;transition:all 0.4s cubic-bezier(0.76,0,0.24,1);backdrop-filter:blur(20px) saturate(180%);background:rgba(244,237,228,0.72);border-bottom:1px solid transparent;}
+        nav.scrolled{padding:0.85rem 2.5rem;border-bottom-color:var(--border);}
+        .nav-logo{font-family:'Instrument Serif',serif;font-size:1.4rem;font-weight:400;color:var(--text);text-decoration:none;letter-spacing:-0.02em;font-style:italic;}
+        .nav-links{display:flex;gap:2.5rem;align-items:center;list-style:none;}
+        .nav-links a{color:var(--muted);text-decoration:none;font-size:0.82rem;font-weight:400;transition:color 0.3s ease;}
+        .nav-links a:hover,.nav-links a.active{color:var(--text);}
+        .nav-cta{background:var(--text)!important;color:var(--bg)!important;padding:0.55rem 1.4rem!important;border-radius:100px;font-weight:500!important;font-size:0.82rem!important;transition:all 0.3s ease;}
+        .nav-cta:hover{background:var(--accent)!important;color:var(--text-light)!important;transform:scale(1.02);}
+        .menu-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;z-index:1001;}
+        .menu-toggle span{width:24px;height:1.5px;background:var(--text);transition:all 0.3s ease;}
+        .menu-toggle.active span:first-child{transform:rotate(45deg) translate(5px,5px);}
+        .menu-toggle.active span:nth-child(2){opacity:0;}
+        .menu-toggle.active span:last-child{transform:rotate(-45deg) translate(5px,-5px);}
+        .mobile-menu{position:fixed;inset:0;background:var(--bg);z-index:999;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:2rem;opacity:0;visibility:hidden;transition:all 0.5s cubic-bezier(0.76,0,0.24,1);}
+        .mobile-menu.active{opacity:1;visibility:visible;}
+        .mobile-menu a{font-family:'Instrument Serif',serif;font-size:2.5rem;color:var(--text);text-decoration:none;font-style:italic;}
+
+        .page-hero{padding:14rem 2.5rem 8rem;position:relative;overflow:hidden;}
+        .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(201,84,42,0.08),transparent 60%);pointer-events:none;}
+        .page-hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;position:relative;z-index:2;}
+        .page-label{display:inline-flex;align-items:center;gap:0.6rem;font-size:0.72rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:1.5rem;}
+        .page-label::before{content:'';width:24px;height:1px;background:var(--accent);}
+        .page-title{font-family:'Instrument Serif',serif;font-size:clamp(3rem,6vw,5.5rem);font-weight:400;letter-spacing:-0.04em;line-height:0.95;margin-bottom:1.5rem;color:var(--text);}
+        .page-title em{font-style:italic;color:var(--accent);}
+        .page-desc{font-size:1.05rem;color:var(--muted);line-height:1.7;font-weight:300;}
+        .hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:2rem;padding:2.5rem;background:rgba(255,255,255,0.4);border:1px solid var(--border);border-radius:24px;backdrop-filter:blur(10px);}
+        .hero-stat-num{font-family:'Instrument Serif',serif;font-size:3rem;font-weight:400;color:var(--text);letter-spacing:-0.03em;margin-bottom:0.25rem;}
+        .hero-stat-num em{color:var(--accent);font-style:italic;}
+        .hero-stat-label{font-size:0.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.12em;}
+
+        .container{max-width:1200px;margin:0 auto;}
+        section.regular{padding:8rem 2.5rem;position:relative;background:var(--bg);}
+        section.regular.alt{background:var(--bg-alt);}
+        .section-label{display:inline-flex;align-items:center;gap:0.6rem;font-size:0.72rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:1.25rem;}
+        .section-label::before{content:'';width:24px;height:1px;background:var(--accent);}
+        .section-title{font-family:'Instrument Serif',serif;font-size:clamp(2.5rem,5vw,4.5rem);font-weight:400;letter-spacing:-0.03em;line-height:1.05;margin-bottom:1.5rem;color:var(--text);}
+        .section-title em{font-style:italic;color:var(--accent);}
+        .section-desc{font-size:1.05rem;color:var(--muted);max-width:600px;line-height:1.6;font-weight:300;}
+        .section-header{margin-bottom:5rem;}
+
+        /* Mission */
+        .mission-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;}
+        .mission-text p{font-size:1.05rem;color:var(--muted);line-height:1.8;font-weight:300;margin-bottom:1.5rem;}
+        .mission-quote{background:rgba(201,84,42,0.06);border-left:3px solid var(--accent);padding:2rem 2.5rem;border-radius:0 16px 16px 0;margin:2rem 0;}
+        .mission-quote p{font-family:'Instrument Serif',serif;font-size:1.4rem;font-style:italic;color:var(--text);line-height:1.5;margin:0;}
+        .mission-values{display:flex;flex-direction:column;gap:1.25rem;}
+        .value-card{background:rgba(255,255,255,0.4);border:1px solid var(--border);border-radius:20px;padding:1.75rem;backdrop-filter:blur(10px);transition:all 0.4s ease;}
+        .value-card:hover{transform:translateX(6px);background:rgba(255,255,255,0.6);}
+        .value-num{font-family:'Instrument Serif',serif;font-size:1.2rem;color:var(--accent);font-style:italic;margin-bottom:0.5rem;}
+        .value-card h3{font-family:'Instrument Serif',serif;font-size:1.2rem;font-weight:400;color:var(--text);margin-bottom:0.4rem;}
+        .value-card p{font-size:0.85rem;color:var(--muted);line-height:1.6;font-weight:300;margin:0;}
+
+        /* Team */
+        .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+        .team-card{background:rgba(255,255,255,0.4);border:1px solid var(--border);border-radius:24px;padding:2.25rem;transition:all 0.4s ease;backdrop-filter:blur(10px);text-align:center;}
+        .team-card:hover{transform:translateY(-4px);background:rgba(255,255,255,0.6);box-shadow:0 20px 40px rgba(42,37,32,0.08);}
+        .team-avatar{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,var(--accent),#ff6b35);display:flex;align-items:center;justify-content:center;color:white;font-weight:600;font-size:1.4rem;margin:0 auto 1.25rem;}
+        .team-name{font-family:'Instrument Serif',serif;font-size:1.3rem;font-weight:400;color:var(--text);margin-bottom:0.25rem;}
+        .team-role{font-size:0.75rem;color:var(--accent);font-weight:500;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:1rem;}
+        .team-bio{font-size:0.85rem;color:var(--muted);line-height:1.6;font-weight:300;}
+
+        /* Timeline */
+        .timeline{max-width:700px;margin:0 auto;position:relative;padding-left:2rem;}
+        .timeline::before{content:'';position:absolute;left:0;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,var(--accent),rgba(201,84,42,0.1));}
+        .timeline-item{position:relative;padding-bottom:3rem;}
+        .timeline-item:last-child{padding-bottom:0;}
+        .timeline-dot{position:absolute;left:-2.35rem;top:0.2rem;width:14px;height:14px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(201,84,42,0.15);}
+        .timeline-year{font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:0.5rem;}
+        .timeline-title{font-family:'Instrument Serif',serif;font-size:1.4rem;font-weight:400;color:var(--text);margin-bottom:0.5rem;}
+        .timeline-desc{font-size:0.88rem;color:var(--muted);line-height:1.6;font-weight:300;}
+
+        /* Testimonials */
+        .testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;}
+        .testimonial-card{background:rgba(255,255,255,0.4);border:1px solid var(--border);padding:2.25rem;border-radius:24px;transition:all 0.4s ease;backdrop-filter:blur(10px);}
+        .testimonial-card:hover{background:rgba(255,255,255,0.6);transform:translateY(-4px);box-shadow:0 20px 40px rgba(42,37,32,0.08);}
+        .testimonial-text{font-family:'Instrument Serif',serif;font-size:1.1rem;line-height:1.5;color:var(--text);margin-bottom:2rem;font-style:italic;}
+        .testimonial-author{display:flex;align-items:center;gap:0.85rem;}
+        .testimonial-avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--accent),#ff006e);display:flex;align-items:center;justify-content:center;color:white;font-weight:600;font-size:0.75rem;}
+        .testimonial-name{font-weight:500;font-size:0.88rem;color:var(--text);}
+        .testimonial-role{font-size:0.72rem;color:var(--muted);}
+
+        /* CTA */
+        .cta-section{text-align:center;position:relative;overflow:hidden;}
+        .cta-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(201,84,42,0.12),transparent 60%);pointer-events:none;}
+        .cta-content{position:relative;z-index:2;}
+
+        .btn-primary{background:var(--text);color:var(--bg);padding:0.95rem 2rem;border-radius:100px;text-decoration:none;font-weight:500;font-size:0.9rem;transition:all 0.4s cubic-bezier(0.76,0,0.24,1);border:none;cursor:pointer;display:inline-flex;align-items:center;gap:0.5rem;}
+        .btn-primary:hover{background:var(--accent);color:var(--text-light);transform:translateY(-2px);}
+        .btn-outline{border:1px solid var(--border);color:var(--text);padding:0.95rem 2rem;border-radius:100px;text-decoration:none;font-weight:500;font-size:0.9rem;transition:all 0.4s cubic-bezier(0.76,0,0.24,1);background:transparent;cursor:pointer;display:inline-flex;align-items:center;gap:0.5rem;}
+        .btn-outline:hover{background:rgba(26,26,26,0.05);border-color:rgba(26,26,26,0.3);}
+        .hero-buttons{display:flex;gap:0.75rem;flex-wrap:wrap;margin-top:2rem;}
+
+        .modal-overlay{position:fixed;inset:0;background:rgba(42,37,32,0.6);backdrop-filter:blur(20px);z-index:10000;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:all 0.4s ease;padding:2rem;}
+        .modal-overlay.active{opacity:1;visibility:visible;}
+        .modal{background:var(--bg);border:1px solid var(--border);border-radius:28px;padding:2.5rem;max-width:500px;width:100%;max-height:90vh;overflow-y:auto;transform:translateY(20px) scale(0.97);transition:transform 0.4s cubic-bezier(0.76,0,0.24,1);position:relative;box-shadow:0 30px 80px rgba(42,37,32,0.25);}
+        .modal-overlay.active .modal{transform:translateY(0) scale(1);}
+        .modal-close{position:absolute;top:1.25rem;right:1.25rem;width:32px;height:32px;border:1px solid var(--border);background:none;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text);font-size:0.85rem;transition:all 0.3s ease;}
+        .modal-close:hover{background:var(--accent);color:var(--text-light);border-color:var(--accent);}
+        .modal h2{font-family:'Instrument Serif',serif;font-size:1.85rem;font-weight:400;margin-bottom:0.4rem;color:var(--text);font-style:italic;}
+        .modal>p{color:var(--muted);font-size:0.88rem;margin-bottom:2rem;font-weight:300;}
+        .form-group{margin-bottom:1rem;}
+        .form-group label{display:block;font-size:0.72rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.5rem;color:var(--muted);}
+        .form-group input,.form-group select,.form-group textarea{width:100%;padding:0.85rem 1rem;background:rgba(255,255,255,0.5);border:1px solid var(--border);border-radius:12px;font-family:'Inter',sans-serif;font-size:0.88rem;color:var(--text);outline:none;transition:border-color 0.3s ease;}
+        .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--accent);}
+        .form-group textarea{resize:vertical;min-height:100px;}
+        .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+        .form-checkbox{display:flex;align-items:flex-start;gap:0.75rem;margin-bottom:1.5rem;}
+        .form-checkbox input{margin-top:0.15rem;accent-color:var(--accent);}
+        .form-checkbox label{font-size:0.75rem;color:var(--muted);line-height:1.5;}
+        .form-submit{width:100%;justify-content:center;padding:1rem;}
+        .form-success{text-align:center;padding:2rem 0;display:none;}
+        .form-success-icon{width:56px;height:56px;border-radius:50%;background:rgba(201,84,42,0.1);border:1px solid rgba(201,84,42,0.2);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;color:var(--accent);font-size:1.4rem;}
+        .form-success h3{font-family:'Instrument Serif',serif;font-size:1.6rem;margin-bottom:0.75rem;color:var(--text);}
+        .form-success p{color:var(--muted);font-size:0.88rem;}
+        .form-content.hidden{display:none;}
+
+        footer{background:var(--bg-dark);color:var(--bg);padding:5rem 2.5rem 2rem;}
+        .footer-main{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:4rem;max-width:1200px;margin:0 auto;padding-bottom:3rem;border-bottom:1px solid rgba(244,237,228,0.1);}
+        .footer-brand h3{font-family:'Instrument Serif',serif;font-size:1.5rem;font-weight:400;margin-bottom:1rem;font-style:italic;color:var(--bg);}
+        .footer-brand p{color:rgba(244,237,228,0.5);font-size:0.85rem;line-height:1.6;max-width:280px;font-weight:300;}
+        .footer-column h4{font-size:0.7rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:1.25rem;color:rgba(244,237,228,0.5);}
+        .footer-column a{display:block;color:var(--bg);text-decoration:none;font-size:0.85rem;padding:0.35rem 0;transition:color 0.3s ease;font-weight:300;}
+        .footer-column a:hover{color:var(--accent);}
+        .footer-bottom{max-width:1200px;margin:0 auto;padding-top:2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+        .footer-bottom p{color:rgba(244,237,228,0.5);font-size:0.75rem;}
+        .footer-bottom-links{display:flex;gap:2rem;}
+        .footer-bottom-links a{color:rgba(244,237,228,0.5);text-decoration:none;font-size:0.75rem;transition:color 0.3s ease;}
+        .footer-bottom-links a:hover{color:var(--accent);}
+
+        .reveal{opacity:1;transform:none;transition:none;}
+        .reveal.active{opacity:1;transform:none;}
+
+        @media(max-width:1024px){
+            .page-hero-inner{grid-template-columns:1fr;gap:3rem;}
+            .mission-grid{grid-template-columns:1fr;gap:3rem;}
+            .team-grid{grid-template-columns:1fr 1fr;}
+            .testimonials-grid{grid-template-columns:1fr;}
+            .footer-main{grid-template-columns:1fr 1fr;gap:3rem;}
+        }
+        @media(max-width:768px){
+            nav{padding:1rem 1.5rem;}
+            .nav-links{display:none;}
+            .menu-toggle{display:flex;}
+            .page-hero{padding:10rem 1.5rem 5rem;}
+            section.regular{padding:5rem 1.5rem;}
+            .hero-stats{grid-template-columns:1fr 1fr;}
+            .team-grid{grid-template-columns:1fr;}
+            .footer-main{grid-template-columns:1fr;gap:2.5rem;}
+            .footer-bottom{flex-direction:column;text-align:center;}
+            .form-row{grid-template-columns:1fr;}
+        }
+    
+        /* ═══════════════════════════════════════════
+           SCROLL-TRIGGERED ANIMATIONS
+        ═══════════════════════════════════════════ */
+
+        /* Fade-up on scroll */
+        .anim-fadeup {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.75s cubic-bezier(0.22,1,0.36,1),
+                        transform 0.75s cubic-bezier(0.22,1,0.36,1);
+        }
+        .anim-fadeup.in { opacity: 1; transform: translateY(0); }
+
+        /* Fade-in (no movement) */
+        .anim-fadein {
+            opacity: 0;
+            transition: opacity 0.9s ease;
+        }
+        .anim-fadein.in { opacity: 1; }
+
+        /* Slide in from left */
+        .anim-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: opacity 0.75s cubic-bezier(0.22,1,0.36,1),
+                        transform 0.75s cubic-bezier(0.22,1,0.36,1);
+        }
+        .anim-left.in { opacity: 1; transform: translateX(0); }
+
+        /* Slide in from right */
+        .anim-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: opacity 0.75s cubic-bezier(0.22,1,0.36,1),
+                        transform 0.75s cubic-bezier(0.22,1,0.36,1);
+        }
+        .anim-right.in { opacity: 1; transform: translateX(0); }
+
+        /* Scale up */
+        .anim-scale {
+            opacity: 0;
+            transform: scale(0.92);
+            transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1),
+                        transform 0.7s cubic-bezier(0.22,1,0.36,1);
+        }
+        .anim-scale.in { opacity: 1; transform: scale(1); }
+
+        /* Stagger delays */
+        .delay-1 { transition-delay: 0.1s !important; }
+        .delay-2 { transition-delay: 0.2s !important; }
+        .delay-3 { transition-delay: 0.3s !important; }
+        .delay-4 { transition-delay: 0.4s !important; }
+        .delay-5 { transition-delay: 0.5s !important; }
+        .delay-6 { transition-delay: 0.6s !important; }
+
+        /* ═══════════════════════════════════════════
+           PAGE HERO ENTRANCE ANIMATION
+        ═══════════════════════════════════════════ */
+        .page-label   { animation: heroItem 0.8s cubic-bezier(0.22,1,0.36,1) both 0.1s; }
+        .page-title   { animation: heroItem 0.9s cubic-bezier(0.22,1,0.36,1) both 0.25s; }
+        .page-desc    { animation: heroItem 0.9s cubic-bezier(0.22,1,0.36,1) both 0.4s; }
+        .hero-buttons { animation: heroItem 0.9s cubic-bezier(0.22,1,0.36,1) both 0.55s; }
+
+        @keyframes heroItem {
+            from { opacity:0; transform:translateY(30px); }
+            to   { opacity:1; transform:translateY(0); }
+        }
+
+        /* ═══════════════════════════════════════════
+           CARD HOVER UPGRADES
+        ═══════════════════════════════════════════ */
+        .event-card, .pricing-card, .testimonial-card,
+        .creator-card, .team-card, .value-card, .service-visual,
+        .quick-action, .faq-cell, .timeline-item {
+            transition: transform 0.4s cubic-bezier(0.22,1,0.36,1),
+                        box-shadow 0.4s cubic-bezier(0.22,1,0.36,1),
+                        background 0.3s ease,
+                        border-color 0.3s ease !important;
+        }
+        .event-card:hover, .pricing-card:hover, .testimonial-card:hover,
+        .creator-card:hover, .team-card:hover {
+            transform: translateY(-8px) !important;
+            box-shadow: 0 24px 60px rgba(42,37,32,0.12) !important;
+        }
+        .value-card:hover {
+            transform: translateX(8px) !important;
+            box-shadow: 0 12px 40px rgba(42,37,32,0.08) !important;
+        }
+        .faq-cell:hover {
+            background: rgba(201,84,42,0.04) !important;
+        }
+        .timeline-item {
+            transition: padding-left 0.3s ease !important;
+        }
+        .timeline-item:hover {
+            padding-left: 0.75rem;
+        }
+
+        /* ═══════════════════════════════════════════
+           BUTTON ANIMATIONS
+        ═══════════════════════════════════════════ */
+        .btn-primary, .btn-outline, .btn-outline-light, .quick-action {
+            transition: all 0.35s cubic-bezier(0.22,1,0.36,1) !important;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-primary::after, .btn-outline::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(255,255,255,0.1);
+            transform: translateX(-100%);
+            transition: transform 0.4s cubic-bezier(0.22,1,0.36,1);
+        }
+        .btn-primary:hover::after, .btn-outline:hover::after {
+            transform: translateX(0);
+        }
+        .btn-primary:hover { transform: translateY(-3px) !important; box-shadow: 0 12px 32px rgba(42,37,32,0.2) !important; }
+        .btn-outline:hover  { transform: translateY(-2px) !important; }
+
+        /* Nav link underline slide */
+        .nav-links a {
+            position: relative;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px; left: 0;
+            width: 0; height: 1px;
+            background: var(--accent);
+            transition: width 0.3s cubic-bezier(0.22,1,0.36,1);
+        }
+        .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+
+        /* ═══════════════════════════════════════════
+           SECTION DIVIDERS — animated line
+        ═══════════════════════════════════════════ */
+        .section-label::before {
+            transition: width 0.6s cubic-bezier(0.22,1,0.36,1) 0.3s;
+        }
+        .anim-fadeup.in .section-label::before,
+        .anim-left.in .section-label::before {
+            width: 40px;
+        }
+
+        /* ═══════════════════════════════════════════
+           CURSOR GLOW (desktop only)
+        ═══════════════════════════════════════════ */
+        .cursor-glow {
+            position: fixed;
+            width: 300px; height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(201,84,42,0.08) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+            transform: translate(-50%,-50%);
+            transition: left 0.15s ease, top 0.15s ease;
+            will-change: left, top;
+        }
+        @media (max-width: 768px) { .cursor-glow { display: none; } }
+
+        /* ═══════════════════════════════════════════
+           COUNTER ANIMATION
+        ═══════════════════════════════════════════ */
+        .stat-num, .hero-stat-num, .scene-stat-num {
+            display: inline-block;
+            transition: transform 0.4s cubic-bezier(0.22,1,0.36,1);
+        }
+        .stat-num:hover, .hero-stat-num:hover { transform: scale(1.05); }
+
+        /* ═══════════════════════════════════════════
+           FLOATING MARQUEE (for dark stats bar)
+        ═══════════════════════════════════════════ */
+        .stats-bar { overflow: hidden; }
+
+        /* ═══════════════════════════════════════════
+           PROCESS / TIMELINE STEP LINES
+        ═══════════════════════════════════════════ */
+        .process-item {
+            transition: padding-left 0.3s ease, background 0.3s ease;
+            border-radius: 12px;
+            padding-left: 0 !important;
+        }
+        .process-item:hover {
+            padding-left: 1rem !important;
+            background: rgba(201,84,42,0.03);
+        }
+
+        /* ═══════════════════════════════════════════
+           IMAGE / VISUAL CARD SHIMMER
+        ═══════════════════════════════════════════ */
+        .event-image {
+            position: relative;
+            overflow: hidden;
+        }
+        .event-image::after {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 60%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
+            transition: left 0.6s ease;
+        }
+        .event-card:hover .event-image::after { left: 150%; }
+
+        /* ═══════════════════════════════════════════
+           FOOTER LINK HOVER
+        ═══════════════════════════════════════════ */
+        .footer-column a {
+            position: relative;
+            display: inline-block;
+            transition: color 0.3s ease, transform 0.3s ease !important;
+        }
+        .footer-column a:hover { transform: translateX(4px) !important; }
+
+        </style>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">emailjs.init("8Y6cgX7I-ikMtQBe3");</script>
+</head>
+<body>
+    <nav id="mainNav">
+        <a href="index.html" class="nav-logo">BrandCrafters</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="influencer.html">Influencer</a></li>
+            <li><a href="about.html" class="active" aria-current="page">About</a></li>
+            <li><a href="contact.html" class="nav-cta">Get Started</a></li>
+        </ul>
+        <div class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="influencer.html">Influencer</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Get Started</a>
+    </div>
+
+    <!-- Hero -->
+    <div class="page-hero">
+        <div class="page-hero-inner">
+            <div>
+                <span class="page-label">Our Story</span>
+                <h1 class="page-title">We exist to help<br>businesses <em>grow digitally.</em></h1>
+                <p class="page-desc">BrandCrafters was built on a simple frustration: too many great businesses in Vadodara had no visible, professional social media presence — and no one helping them build one the right way. We set out to fix that.</p>
+            </div>
+            <div class="hero-stats">
+                <div><div class="hero-stat-num"><em>1,500+</em></div><div class="hero-stat-label">Businesses Helped</div></div>
+                <div><div class="hero-stat-num"><em>5+</em></div><div class="hero-stat-label">Years Growing</div></div>
+                <div><div class="hero-stat-num"><em>8+</em></div><div class="hero-stat-label">Service Types</div></div>
+                <div><div class="hero-stat-num"><em>6</em></div><div class="hero-stat-label">Platforms Managed</div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mission -->
+    <section class="regular">
+        <div class="container">
+            <div class="mission-grid reveal">
+                <div class="mission-text">
+                    <span class="section-label">Our Mission</span>
+                    <h2 class="section-title">More than<br><em>just posting.</em></h2>
+                    <p>BrandCrafters was founded with one belief: social media for a business should be a growth tool, not just a content dump. Most businesses post without strategy. They have no consistent brand look, no clear message, and no way to turn followers into inquiries. We solve all three.</p>
+                    <p>We work with businesses of all sizes — from solo founders and family restaurants to clinics, fashion brands, and real estate firms — giving each one the professional social media presence and strategy they deserve.</p>
+                    <div class="mission-quote">
+                        <p>"Your business deserves more than random posting. Every piece of content we create is built to represent your brand and move your audience toward action."</p>
+                    </div>
+                    <p>We are not just a content agency. We are a business growth partner — and we measure our success by the inquiries, calls, and customers our work generates for you.</p>
+                </div>
+                <div class="mission-values">
+                    <div class="value-card">
+                        <div class="value-num">01</div>
+                        <h3>Strategy First</h3>
+                        <p>We don't start creating before we understand your business, audience, and goal. Strategy is the foundation of everything we build.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-num">02</div>
+                        <h3>Quality Over Volume</h3>
+                        <p>We believe in fewer, better posts — content that actually builds your brand and drives action — rather than filling a feed for the sake of it.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-num">03</div>
+                        <h3>Inquiries, Not Just Likes</h3>
+                        <p>Vanity metrics don't grow businesses. We focus relentlessly on content and campaigns that generate real customer inquiries and interest.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-num">04</div>
+                        <h3>Long-Term Partnership</h3>
+                        <p>We work best when we work consistently. Our best results come from ongoing relationships — understanding a business deeply and evolving with it.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team -->
+    <section class="regular alt">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">The Team</span>
+                <h2 class="section-title">The people behind<br>your <em>growth.</em></h2>
+                <p class="section-desc">A focused team of strategists, designers, and content creators — each deeply experienced in helping businesses communicate better and grow faster on social media.</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-card reveal">
+                    <div class="team-avatar">BC</div>
+                    <div class="team-name">Brand Strategy</div>
+                    <div class="team-role">Strategy & Direction</div>
+                    <p class="team-bio">Leads all client strategy, business positioning, and campaign direction. Ensures every campaign is aligned to real business goals, not just aesthetic preferences.</p>
+                </div>
+                <div class="team-card reveal">
+                    <div class="team-avatar" style="background:linear-gradient(135deg,#667eea,#764ba2);">CD</div>
+                    <div class="team-name">Creative Design</div>
+                    <div class="team-role">Visual Content & Design</div>
+                    <p class="team-bio">Builds the visual identity and content system for each client. Designs every post, carousel, story, and campaign creative with both aesthetics and conversion in mind.</p>
+                </div>
+                <div class="team-card reveal">
+                    <div class="team-avatar" style="background:linear-gradient(135deg,#f093fb,#f5576c);">CM</div>
+                    <div class="team-name">Content & Copywriting</div>
+                    <div class="team-role">Captions, Copy & Voice</div>
+                    <p class="team-bio">Writes all captions, campaign copy, CTA scripts, and inquiry-focused messages. Specialises in making brands sound credible, relatable, and action-worthy.</p>
+                </div>
+                <div class="team-card reveal">
+                    <div class="team-avatar" style="background:linear-gradient(135deg,#4facfe,#00f2fe);">IM</div>
+                    <div class="team-name">Influencer Management</div>
+                    <div class="team-role">Influencer & Creator Relations</div>
+                    <p class="team-bio">Manages all influencer discovery, screening, briefing, and campaign coordination. Builds relationships with creators that produce authentic, impactful collaborations.</p>
+                </div>
+                <div class="team-card reveal">
+                    <div class="team-avatar" style="background:linear-gradient(135deg,#a8edea,#4facfe);">CA</div>
+                    <div class="team-name">Client Accounts</div>
+                    <div class="team-role">Client Relations & Support</div>
+                    <p class="team-bio">The bridge between clients and the team. Handles onboarding, monthly check-ins, feedback management, and ensuring every client always knows what's happening and why.</p>
+                </div>
+                <div class="team-card reveal">
+                    <div class="team-avatar" style="background:linear-gradient(135deg,#f5af19,#f12711);">LA</div>
+                    <div class="team-name">Launch & Campaigns</div>
+                    <div class="team-role">Campaign Execution</div>
+                    <p class="team-bio">Executes product launches, service announcements, and promotional campaigns from planning to post-launch analysis. Ensures launches land with maximum impact.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="regular">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Our Journey</span>
+                <h2 class="section-title">Five years of<br><em>crafting growth.</em></h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-year">2020</div>
+                    <div class="timeline-title">BrandCrafters Founded</div>
+                    <p class="timeline-desc">Started with a vision to bring professional social media strategy to local businesses in Vadodara that were being left behind in the digital space.</p>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-year">2021</div>
+                    <div class="timeline-title">First 100 Business Campaigns</div>
+                    <p class="timeline-desc">Reached our first 100 client campaigns across restaurants, clinics, fashion brands, and service businesses — establishing our core service model.</p>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-year">2022</div>
+                    <div class="timeline-title">Influencer Program Launch</div>
+                    <p class="timeline-desc">Launched the influencer marketing division — connecting local creators with brands and helping businesses run structured, brand-safe influencer campaigns.</p>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-year">2023</div>
+                    <div class="timeline-title">500+ Businesses Served</div>
+                    <p class="timeline-desc">Expanded our team and services, crossed 500 businesses helped, and launched our Creator Growth Program for local influencers in Gujarat.</p>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-year">2025</div>
+                    <div class="timeline-title">1,500+ Businesses & Growing</div>
+                    <p class="timeline-desc">Now serving 1,500+ businesses across Vadodara and Gujarat, with a full team, 8+ service categories, and a growing network of verified local creators.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="regular alt">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">What Clients Say</span>
+                <h2 class="section-title">Businesses that<br><em>grew with us.</em></h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal">
+                    <p class="testimonial-text">"Before BrandCrafters, our Instagram was embarrassing. Now it looks professional, posts consistently, and we actually get inquiries through DMs. The results showed within the first month."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">MR</div>
+                        <div><div class="testimonial-name">Mehul R.</div><div class="testimonial-role">Beauty Clinic, Vadodara</div></div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal">
+                    <p class="testimonial-text">"Our restaurant launch was handled end-to-end by BrandCrafters. The pre-launch content got people excited and we had a packed opening week. Couldn't have done it without them."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="background:linear-gradient(135deg,#667eea,#764ba2);">SV</div>
+                        <div><div class="testimonial-name">Sneha V.</div><div class="testimonial-role">Restaurant Owner, Race Course</div></div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal">
+                    <p class="testimonial-text">"As a creator, BrandCrafters helped me build a proper media kit, understand my worth, and land my first paid collaboration. They genuinely invest in your growth as a creator."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="background:linear-gradient(135deg,#f093fb,#f5576c);">AP</div>
+                        <div><div class="testimonial-name">Ananya P.</div><div class="testimonial-role">Lifestyle Creator, Vadodara</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="regular cta-section">
+        <div class="container cta-content reveal">
+            <span class="section-label" style="justify-content:center;">Work With Us</span>
+            <h2 class="section-title" style="text-align:center;">Let's grow your brand<br><em>together.</em></h2>
+            <p class="section-desc" style="margin:0 auto 2.5rem;text-align:center;">Book a free strategy call and let us understand your business, your audience, and what growth looks like for you.</p>
+            <div class="hero-buttons" style="justify-content:center;">
+                <a href="#" class="btn-primary" onclick="openModal(); return false;">Book a Free Strategy Call</a>
+                <a href="contact.html" class="btn-outline">View Contact Details</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-main">
+            <div class="footer-brand">
+                <h3>BrandCrafters</h3>
+                <p>We craft digital growth for businesses, brands, founders, and influencers. From visibility to inquiries, from content to collaborations.</p>
+                <p style="margin-top:1rem;font-size:0.78rem;color:rgba(244,237,228,0.4);">GF-15, Sharnam Fortune, Opp. Inox,<br>Beside Sterling Hospital, Race Course, Vadodara</p>
+            </div>
+            <div class="footer-column">
+                <h4>Pages</h4>
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="influencer.html">Influencer</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-column">
+                <h4>Services</h4>
+                <a href="services.html">Social Media Management</a>
+                <a href="services.html#content">Content Strategy</a>
+                <a href="services.html#launches">Product Launches</a>
+                <a href="services.html#leads">Inquiry Generation</a>
+            </div>
+            <div class="footer-column">
+                <h4>Contact</h4>
+                <a href="tel:+919638955666">+91 96389 55666</a>
+                <a href="mailto:brand.crafters06@gmail.com">brand.crafters06@gmail.com</a>
+                <a href="https://wa.me/919638955666" target="_blank" rel="noopener">WhatsApp Us</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 BrandCrafters. All rights reserved. Vadodara, Gujarat, India.</p>
+            <div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Terms</a></div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true">
+        <div class="modal">
+            <button class="modal-close" onclick="closeModal()">✕</button>
+            <div class="form-content" id="formContent">
+                <h2>Book Your Free Strategy Call</h2>
+                <p>Tell us about your goal and we'll help you build the right growth plan.</p>
+                <form onsubmit="submitForm(event)">
+                    <div class="form-row">
+                        <div class="form-group"><label>Full Name</label><input type="text" placeholder="Your name" required></div>
+                        <div class="form-group"><label>Business Name</label><input type="text" placeholder="Brand name" required></div>
+                    </div>
+                    <div class="form-group"><label>Phone / WhatsApp</label><input type="tel" placeholder="+91 00000 00000" required></div>
+                    <div class="form-group"><label>Email Address</label><input type="email" placeholder="you@example.com" required></div>
+                    <div class="form-group">
+                        <label>I am interested in</label>
+                        <select required>
+                            <option value="">Select a service</option>
+                            <option>Business Growth & Social Media Management</option>
+                            <option>Product Launch</option>
+                            <option>Influencer Marketing</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group"><label>Tell us about your goal</label><textarea placeholder="What do you want to achieve?" required></textarea></div>
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">I agree to be contacted by BrandCrafters via WhatsApp, email, or phone.</label>
+                    </div>
+                    <button type="submit" class="btn-primary form-submit">Submit Inquiry</button>
+                </form>
+            </div>
+            <div class="form-success" id="formSuccess">
+                <div class="form-success-icon">✓</div>
+                <h3>Inquiry received!</h3>
+                <p>We'll get back to you within 24 hours via WhatsApp or email.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('scroll',()=>document.getElementById('mainNav').classList.toggle('scrolled',window.scrollY>50));
+        const menuToggle=document.getElementById('menuToggle');
+        const mobileMenu=document.getElementById('mobileMenu');
+        menuToggle.addEventListener('click',()=>{menuToggle.classList.toggle('active');mobileMenu.classList.toggle('active');});
+        mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menuToggle.classList.remove('active');mobileMenu.classList.remove('active');}));
+        function openModal(){document.getElementById('modalOverlay').classList.add('active');document.body.style.overflow='hidden';}
+        function closeModal(){document.getElementById('modalOverlay').classList.remove('active');document.body.style.overflow='';}
+        document.getElementById('modalOverlay').addEventListener('click',e=>{if(e.target===e.currentTarget)closeModal();});
+        function submitForm(e) {
+            e.preventDefault();
+            const form = e.target;
+            const btn = form.querySelector('[type="submit"]');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = 'Sending...';
+            btn.disabled = true;
+
+            // Collect all labelled fields
+            const getName = (label) => {
+                const inputs = form.querySelectorAll('input,select,textarea');
+                for (let el of inputs) {
+                    const lg = el.closest('.form-group');
+                    if (lg) {
+                        const lbl = lg.querySelector('label');
+                        if (lbl && lbl.textContent.toLowerCase().includes(label)) return el.value || '';
+                    }
+                }
+                return '';
+            };
+
+            const allInputs = form.querySelectorAll('input[type="text"],input[type="email"],input[type="tel"],select,textarea');
+            const fieldValues = {};
+            allInputs.forEach(el => {
+                const lg = el.closest('.form-group');
+                if (lg) {
+                    const lbl = lg.querySelector('label');
+                    if (lbl) fieldValues[lbl.textContent.replace(/\*/g,'').trim()] = el.value || '';
+                }
+            });
+
+            const templateParams = {
+                from_name:        getName('name'),
+                from_email:       getName('email'),
+                phone:            getName('phone') || getName('whatsapp'),
+                business_name:    getName('business') || getName('creator'),
+                service_interest: getName('interested') || getName('service') || getName('i am'),
+                message:          getName('goal') || getName('message') || getName('tell'),
+                page_source:      'About Page',
+                all_fields:       Object.entries(fieldValues).map(([k,v]) => k + ': ' + v).join('
+'),
+                reply_to:         getName('email'),
+            };
+
+            emailjs.send('service_fazdche', 'template_v0o6bih', templateParams)
+                .then(() => {
+                    const fc = document.getElementById('formContent');
+                    const fs = document.getElementById('formSuccess');
+                    if (fc) fc.classList.add('hidden');
+                    if (fs) fs.style.display = 'block';
+                })
+                .catch((err) => {
+                    console.error('EmailJS error:', err);
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                    alert('Something went wrong. Please try again or WhatsApp us directly at +91 96389 55666');
+                });
+        }
+        // Make all reveal elements visible immediately — no JS timing dependency
+        document.querySelectorAll('.reveal').forEach(el => el.classList.add('active'));
+    
+        /* ═══════════════════════════════════════════
+           SCROLL ANIMATION ENGINE
+        ═══════════════════════════════════════════ */
+        (function() {
+            // Cursor glow
+            const glow = document.createElement('div');
+            glow.className = 'cursor-glow';
+            document.body.appendChild(glow);
+            document.addEventListener('mousemove', e => {
+                glow.style.left = e.clientX + 'px';
+                glow.style.top  = e.clientY + 'px';
+            });
+
+            // IntersectionObserver for scroll animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in');
+                        // Don't unobserve — keeps element visible
+                    }
+                });
+            }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+
+            document.querySelectorAll('.anim-fadeup, .anim-fadein, .anim-left, .anim-right, .anim-scale')
+                    .forEach(el => {
+                        observer.observe(el);
+                        // Force-show if already in viewport
+                        const r = el.getBoundingClientRect();
+                        if (r.top < window.innerHeight) el.classList.add('in');
+                    });
+
+            // Stagger children of grids automatically
+            document.querySelectorAll(
+                '.events-grid, .pricing-grid, .testimonials-grid, .creator-grid, .team-grid, .stats-inner'
+            ).forEach(grid => {
+                Array.from(grid.children).forEach((child, i) => {
+                    if (!child.classList.contains('anim-fadeup')) {
+                        child.classList.add('anim-fadeup');
+                        child.style.transitionDelay = (i * 0.12) + 's';
+                        observer.observe(child);
+                        const r = child.getBoundingClientRect();
+                        if (r.top < window.innerHeight) child.classList.add('in');
+                    }
+                });
+            });
+
+            // Stagger process/timeline items
+            document.querySelectorAll('.process-item, .timeline-item, .faq-item, .faq-cell').forEach((el, i) => {
+                if (!el.classList.contains('anim-fadeup')) {
+                    el.classList.add('anim-fadeup');
+                    el.style.transitionDelay = Math.min(i * 0.08, 0.5) + 's';
+                    observer.observe(el);
+                    const r = el.getBoundingClientRect();
+                    if (r.top < window.innerHeight) el.classList.add('in');
+                }
+            });
+
+            // Service blocks — left/right alternating
+            document.querySelectorAll('.service-block').forEach((block, i) => {
+                const [a, b] = block.children;
+                if (a && !a.classList.contains('anim-left')) {
+                    a.classList.add(i % 2 === 0 ? 'anim-left' : 'anim-right');
+                    a.style.transitionDelay = '0s';
+                    observer.observe(a);
+                    const r = a.getBoundingClientRect();
+                    if (r.top < window.innerHeight) a.classList.add('in');
+                }
+                if (b && !b.classList.contains('anim-right')) {
+                    b.classList.add(i % 2 === 0 ? 'anim-right' : 'anim-left');
+                    b.style.transitionDelay = '0.15s';
+                    observer.observe(b);
+                    const r = b.getBoundingClientRect();
+                    if (r.top < window.innerHeight) b.classList.add('in');
+                }
+            });
+
+            // Section headers
+            document.querySelectorAll('.section-header').forEach(el => {
+                if (!el.classList.contains('anim-fadeup')) {
+                    el.classList.add('anim-fadeup');
+                    observer.observe(el);
+                    const r = el.getBoundingClientRect();
+                    if (r.top < window.innerHeight) el.classList.add('in');
+                }
+            });
+
+            // Mission/split panels
+            document.querySelectorAll('.split-panel, .mission-text, .mission-values').forEach((el, i) => {
+                if (!el.classList.contains('anim-left') && !el.classList.contains('anim-right')) {
+                    el.classList.add(i % 2 === 0 ? 'anim-left' : 'anim-right');
+                    observer.observe(el);
+                    const r = el.getBoundingClientRect();
+                    if (r.top < window.innerHeight) el.classList.add('in');
+                }
+            });
+
+            // Location card, hours card, contact info blocks
+            document.querySelectorAll('.location-card, .hours-card, .contact-form-wrap, .contact-info').forEach((el, i) => {
+                if (!el.classList.contains('anim-fadeup')) {
+                    el.classList.add('anim-scale');
+                    el.style.transitionDelay = (i * 0.1) + 's';
+                    observer.observe(el);
+                    const r = el.getBoundingClientRect();
+                    if (r.top < window.innerHeight) el.classList.add('in');
+                }
+            });
+
+            // Hero stats grid items
+            document.querySelectorAll('.hero-stats > div').forEach((el, i) => {
+                el.classList.add('anim-fadeup');
+                el.style.transitionDelay = (0.3 + i * 0.1) + 's';
+                observer.observe(el);
+                const r = el.getBoundingClientRect();
+                if (r.top < window.innerHeight) el.classList.add('in');
+            });
+        })();
+
+        </script>
+</body>
+</html>
