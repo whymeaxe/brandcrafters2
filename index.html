@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrandCrafters – Social Media Marketing & Brand Promotion Agency | Vadodara</title>
+    <meta name="description" content="BrandCrafters is Vadodara's leading social media marketing, brand promotion, and influencer marketing agency. We help businesses, startups, and influencers grow through strategy, content, and real inquiries.">
+    <meta name="keywords" content="social media marketing Vadodara, brand promotion agency, influencer marketing Gujarat, digital marketing Vadodara, BrandCrafters">
+    <meta name="author" content="BrandCrafters">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://brandcrafters.in/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://brandcrafters.in/">
+    <meta property="og:title" content="BrandCrafters – Social Media Marketing & Brand Promotion Agency | Vadodara">
+    <meta property="og:description" content="Vadodara's digital growth partner for businesses, startups, and influencers. Strategy, content, launches & influencer marketing — all under one roof.">
+    <meta property="og:image" content="https://brandcrafters.in/og-home.jpg">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:site_name" content="BrandCrafters">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="BrandCrafters – Social Media Marketing & Brand Promotion Agency">
+    <meta name="twitter:description" content="Vadodara's digital growth partner for businesses, startups, and influencers.">
+    <meta name="twitter:image" content="https://brandcrafters.in/og-home.jpg">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MarketingAgency",
+      "name": "BrandCrafters",
+      "url": "https://brandcrafters.in",
+      "logo": "https://brandcrafters.in/logo.png",
+      "description": "Social media marketing, brand promotion, and influencer marketing agency based in Vadodara, Gujarat, India.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "GF-15, Sharnam Fortune, Opp. Inox, Beside Sterling Hospital, Race Course",
+        "addressLocality": "Vadodara",
+        "addressRegion": "Gujarat",
+        "postalCode": "390007",
+        "addressCountry": "IN"
+      },
+      "telephone": "+919638955666",
+      "email": "brand.crafters06@gmail.com",
+      "sameAs": [
+        "https://www.instagram.com/brandcrafters",
+        "https://www.facebook.com/brandcrafters"
+      ],
+      "areaServed": {
+        "@type": "City",
+        "name": "Vadodara"
+      },
+      "numberOfEmployees": { "@type": "QuantitativeValue", "value": "10" },
+      "foundingDate": "2020",
+      "priceRange": "₹₹"
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        :root {
+            --bg:#f4ede4; --bg-alt:#ebe2d5; --bg-dark:#2a2520;
+            --text:#1a1a1a; --text-light:#f4ede4;
+            --muted:#6b6358; --muted-light:#a39685;
+            --accent:#c9542a; --accent-dark:#a8401f;
+            --border:rgba(26,26,26,0.1); --border-light:rgba(26,26,26,0.06);
+        }
+        html { scroll-behavior:smooth; font-size:16px; background:var(--bg); }
+        body { font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif; background:var(--bg); color:var(--text); overflow-x:hidden; -webkit-font-smoothing:antialiased; line-height:1.5; }
+        ::selection { background:var(--accent); color:var(--text-light); }
+        ::-webkit-scrollbar { width:8px; }
+        ::-webkit-scrollbar-track { background:var(--bg); }
+        ::-webkit-scrollbar-thumb { background:#c9bda9; border-radius:4px; }
+        ::-webkit-scrollbar-thumb:hover { background:#a39685; }
+
+        /* Loader */
+        .loader { position:fixed; inset:0; background:var(--bg); z-index:9999; display:flex; align-items:center; justify-content:center; flex-direction:column; transition:opacity 0.8s cubic-bezier(0.76,0,0.24,1),visibility 0.8s; }
+        .loader.hidden { opacity:0; visibility:hidden; }
+        .loader-logo { font-family:'Instrument Serif',serif; font-size:clamp(2.5rem,6vw,4rem); color:var(--text); font-weight:400; letter-spacing:-0.03em; font-style:italic; opacity:0; animation:fadeIn 0.8s ease forwards 0.3s; }
+        .loader-bar { width:160px; height:1px; background:rgba(26,26,26,0.1); margin-top:2.5rem; overflow:hidden; }
+        .loader-bar-fill { height:100%; background:var(--text); width:0%; animation:loadBar 1.8s cubic-bezier(0.76,0,0.24,1) forwards 0.5s; }
+        @keyframes fadeIn { to { opacity:1; } }
+        @keyframes loadBar { to { width:100%; } }
+
+        /* Nav */
+        nav { position:fixed; top:0; left:0; right:0; z-index:1000; padding:1.25rem 2.5rem; display:flex; justify-content:space-between; align-items:center; transition:all 0.4s cubic-bezier(0.76,0,0.24,1); backdrop-filter:blur(20px) saturate(180%); background:rgba(244,237,228,0.72); border-bottom:1px solid transparent; }
+        nav.scrolled { padding:0.85rem 2.5rem; border-bottom-color:var(--border); }
+        .nav-logo { font-family:'Instrument Serif',serif; font-size:1.4rem; font-weight:400; color:var(--text); text-decoration:none; letter-spacing:-0.02em; font-style:italic; }
+        .nav-links { display:flex; gap:2.5rem; align-items:center; list-style:none; }
+        .nav-links a { color:var(--muted); text-decoration:none; font-size:0.82rem; font-weight:400; transition:color 0.3s ease; }
+        .nav-links a:hover, .nav-links a.active { color:var(--text); }
+        .nav-cta { background:var(--text)!important; color:var(--bg)!important; padding:0.55rem 1.4rem!important; border-radius:100px; font-weight:500!important; font-size:0.82rem!important; transition:all 0.3s ease; }
+        .nav-cta:hover { background:var(--accent)!important; color:var(--text-light)!important; transform:scale(1.02); }
+        .menu-toggle { display:none; flex-direction:column; gap:5px; cursor:pointer; z-index:1001; }
+        .menu-toggle span { width:24px; height:1.5px; background:var(--text); transition:all 0.3s ease; }
+        .menu-toggle.active span:first-child { transform:rotate(45deg) translate(5px,5px); }
+        .menu-toggle.active span:nth-child(2) { opacity:0; }
+        .menu-toggle.active span:last-child { transform:rotate(-45deg) translate(5px,-5px); }
+        .mobile-menu { position:fixed; inset:0; background:var(--bg); z-index:999; display:flex; flex-direction:column; justify-content:center; align-items:center; gap:2rem; opacity:0; visibility:hidden; transition:all 0.5s cubic-bezier(0.76,0,0.24,1); }
+        .mobile-menu.active { opacity:1; visibility:visible; }
+        .mobile-menu a { font-family:'Instrument Serif',serif; font-size:2.5rem; color:var(--text); text-decoration:none; font-style:italic; }
+
+        /* Scroll Stage */
+        .scroll-stage { position:relative; height:600vh; }
+        .stage-sticky { position:sticky; top:0; height:100vh; overflow:hidden; background:var(--bg); }
+        .ambient-bg { position:absolute; inset:0; background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(201,84,42,0.08),transparent 60%),radial-gradient(ellipse 60% 40% at 0% 100%,rgba(201,84,42,0.05),transparent 50%),radial-gradient(ellipse 50% 50% at 100% 50%,rgba(168,64,31,0.04),transparent 50%); pointer-events:none; }
+        .noise-overlay { position:absolute; inset:0; opacity:0.04; mix-blend-mode:multiply; pointer-events:none; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+
+        /* Scenes */
+        .scene { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; padding:8rem 2rem 4rem; opacity:0; transition:opacity 0.6s ease; pointer-events:none; }
+        .scene.active { opacity:1; pointer-events:auto; }
+        .scene-inner { max-width:1200px; width:100%; display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; }
+        .scene-text { display:flex; flex-direction:column; gap:1.5rem; }
+        .scene-label { display:inline-flex; align-items:center; gap:0.6rem; font-size:0.72rem; font-weight:500; letter-spacing:0.15em; text-transform:uppercase; color:var(--accent); }
+        .scene-label::before { content:''; width:24px; height:1px; background:var(--accent); }
+        .scene-title { font-family:'Instrument Serif',serif; font-size:clamp(2.5rem,5vw,4.5rem); font-weight:400; letter-spacing:-0.03em; line-height:1.0; color:var(--text); }
+        .scene-title em { font-style:italic; color:var(--accent); }
+        .scene-desc { font-size:1.05rem; color:var(--muted); max-width:480px; line-height:1.6; font-weight:300; }
+        .scene-stats { display:flex; gap:2.5rem; margin-top:1rem; }
+        .scene-stat-num { font-family:'Instrument Serif',serif; font-size:2rem; font-weight:400; color:var(--text); letter-spacing:-0.02em; }
+        .scene-stat-num em { color:var(--accent); font-style:italic; }
+        .scene-stat-label { font-size:0.72rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.1em; margin-top:0.25rem; }
+        .scene-visual { position:relative; height:400px; display:flex; align-items:center; justify-content:center; }
+        .scene-hero .scene-inner { grid-template-columns:1fr; text-align:center; justify-items:center; }
+        .scene-hero .scene-desc { margin:0 auto; }
+
+        .hero-badge { display:inline-flex; align-items:center; gap:0.6rem; padding:0.5rem 1.1rem; border:1px solid var(--border); border-radius:100px; backdrop-filter:blur(10px); background:rgba(255,255,255,0.3); font-size:0.72rem; color:var(--muted); letter-spacing:0.08em; text-transform:uppercase; }
+        .hero-badge-dot { width:6px; height:6px; background:var(--accent); border-radius:50%; animation:pulse 2s ease-in-out infinite; box-shadow:0 0 8px var(--accent); }
+        @keyframes pulse { 0%,100%{opacity:1}50%{opacity:0.4} }
+        .hero-title { font-family:'Instrument Serif',serif; font-size:clamp(3.5rem,9vw,8rem); font-weight:400; line-height:0.95; color:var(--text); letter-spacing:-0.04em; }
+        .hero-title em { font-style:italic; color:var(--accent); }
+        .hero-sub { font-size:clamp(1rem,1.3vw,1.15rem); color:var(--muted); max-width:540px; line-height:1.6; font-weight:300; }
+        .hero-buttons { display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap; margin-top:1rem; }
+
+        .btn-primary { background:var(--text); color:var(--bg); padding:0.95rem 2rem; border-radius:100px; text-decoration:none; font-weight:500; font-size:0.9rem; transition:all 0.4s cubic-bezier(0.76,0,0.24,1); border:none; cursor:pointer; display:inline-flex; align-items:center; gap:0.5rem; }
+        .btn-primary:hover { background:var(--accent); color:var(--text-light); transform:translateY(-2px); }
+        .btn-outline { border:1px solid var(--border); color:var(--text); padding:0.95rem 2rem; border-radius:100px; text-decoration:none; font-weight:500; font-size:0.9rem; transition:all 0.4s cubic-bezier(0.76,0,0.24,1); background:transparent; cursor:pointer; display:inline-flex; align-items:center; gap:0.5rem; }
+        .btn-outline:hover { background:rgba(26,26,26,0.05); border-color:rgba(26,26,26,0.3); }
+
+        /* Floating Icons */
+        .icon-stage { position:absolute; inset:0; pointer-events:none; z-index:5; }
+        .icon-3d { position:absolute; width:80px; height:80px; border-radius:22px; cursor:pointer; pointer-events:auto; will-change:transform; transition:filter 0.3s ease; overflow:hidden; }
+        .icon-3d-inner { position:absolute; inset:0; border-radius:inherit; display:flex; align-items:center; justify-content:center; }
+        .icon-3d::after { content:''; position:absolute; top:6%; left:8%; right:35%; bottom:55%; border-radius:50%; background:radial-gradient(ellipse at top left,rgba(255,255,255,0.55),transparent 70%); pointer-events:none; z-index:3; }
+        .icon-3d svg { width:48%; height:48%; position:relative; z-index:2; filter:drop-shadow(1px 3px 4px rgba(0,0,0,0.35)); }
+        .icon-instagram { background:linear-gradient(135deg,#f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); box-shadow:0 25px 50px rgba(220,39,67,0.25),0 12px 24px rgba(0,0,0,0.15),inset 0 -10px 14px rgba(0,0,0,0.25),inset 0 4px 8px rgba(255,255,255,0.25); }
+        .icon-tiktok { background:linear-gradient(135deg,#25F4EE 0%,#000000 50%,#FE2C55 100%); box-shadow:0 25px 50px rgba(254,44,85,0.22),0 12px 24px rgba(0,0,0,0.2),inset 0 -10px 14px rgba(0,0,0,0.4),inset 0 4px 8px rgba(255,255,255,0.15); }
+        .icon-youtube { background:linear-gradient(135deg,#ff0000,#cc0000); box-shadow:0 25px 50px rgba(255,0,0,0.25),0 12px 24px rgba(0,0,0,0.15),inset 0 -10px 14px rgba(0,0,0,0.3),inset 0 4px 8px rgba(255,255,255,0.2); }
+        .icon-snapchat { background:linear-gradient(135deg,#fffc00,#ffe600); box-shadow:0 25px 50px rgba(255,220,0,0.3),0 12px 24px rgba(0,0,0,0.15),inset 0 -10px 14px rgba(180,150,0,0.3),inset 0 4px 8px rgba(255,255,255,0.45); }
+        .icon-twitter { background:linear-gradient(135deg,#333,#000); box-shadow:0 25px 50px rgba(0,0,0,0.3),0 12px 24px rgba(0,0,0,0.2),inset 0 -10px 14px rgba(0,0,0,0.4),inset 0 4px 8px rgba(255,255,255,0.12); }
+        .icon-facebook { background:linear-gradient(135deg,#1877f2,#0e5fc7); box-shadow:0 25px 50px rgba(24,119,242,0.25),0 12px 24px rgba(0,0,0,0.15),inset 0 -10px 14px rgba(0,0,0,0.25),inset 0 4px 8px rgba(255,255,255,0.25); }
+
+        /* Phone */
+        .phone-container { position:absolute; bottom:-100vh; left:50%; transform:translateX(-50%); width:320px; height:640px; opacity:0; transition:opacity 0.5s ease; z-index:4; pointer-events:none; }
+        .phone-container.visible { opacity:1; }
+        .phone-frame { width:100%; height:100%; background:linear-gradient(145deg,#3a3530,#1a1612); border-radius:48px; padding:12px; box-shadow:0 50px 100px rgba(42,37,32,0.4),0 30px 60px rgba(201,84,42,0.15),inset 0 2px 4px rgba(255,255,255,0.08),inset 0 -2px 4px rgba(0,0,0,0.5); position:relative; }
+        .phone-screen { width:100%; height:100%; background:linear-gradient(160deg,#2a2520 0%,#1a1612 50%,#0a0806 100%); border-radius:38px; position:relative; overflow:hidden; display:flex; flex-direction:column; padding:50px 24px 30px; }
+        .phone-notch { position:absolute; top:18px; left:50%; transform:translateX(-50%); width:100px; height:28px; background:#000; border-radius:100px; z-index:2; }
+        .phone-time { color:var(--bg); font-size:1.1rem; font-weight:600; font-family:'Inter',sans-serif; text-align:center; margin-bottom:1.5rem; letter-spacing:-0.02em; }
+        .phone-greeting { color:rgba(244,237,228,0.7); font-size:0.75rem; text-align:center; margin-bottom:0.3rem; font-weight:400; }
+        .phone-headline { color:var(--bg); font-family:'Instrument Serif',serif; font-size:1.4rem; text-align:center; font-style:italic; letter-spacing:-0.02em; margin-bottom:2rem; }
+        .phone-icon-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; justify-items:center; margin-top:auto; margin-bottom:2rem; }
+        .phone-icon-slot { width:60px; height:60px; border-radius:16px; background:rgba(255,255,255,0.03); border:1px dashed rgba(255,255,255,0.08); position:relative; }
+        .phone-home-bar { position:absolute; bottom:24px; left:50%; transform:translateX(-50%); width:100px; height:4px; background:rgba(255,255,255,0.5); border-radius:4px; }
+        .phone-container::before { content:''; position:absolute; inset:-60px; background:radial-gradient(circle,rgba(201,84,42,0.2),transparent 60%); z-index:-1; border-radius:50%; opacity:0; transition:opacity 1s ease; }
+        .phone-container.visible::before { opacity:1; }
+
+        /* Progress */
+        .progress-indicator { position:fixed; right:2rem; top:50%; transform:translateY(-50%); z-index:100; display:flex; flex-direction:column; gap:1rem; opacity:0; transition:opacity 0.4s ease; }
+        .progress-indicator.visible { opacity:1; }
+        .progress-dot { width:8px; height:8px; border-radius:50%; background:rgba(26,26,26,0.2); transition:all 0.3s ease; cursor:pointer; position:relative; }
+        .progress-dot::after { content:attr(data-label); position:absolute; right:20px; top:50%; transform:translateY(-50%); font-size:0.7rem; color:var(--text); white-space:nowrap; opacity:0; transition:opacity 0.3s ease; pointer-events:none; font-weight:500; }
+        .progress-dot:hover::after { opacity:1; }
+        .progress-dot.active { background:var(--accent); width:24px; border-radius:4px; box-shadow:0 0 12px rgba(201,84,42,0.6); }
+
+        /* Scroll hint */
+        .scroll-hint { position:absolute; bottom:2rem; left:50%; transform:translateX(-50%); font-size:0.7rem; color:var(--muted); letter-spacing:0.2em; text-transform:uppercase; display:flex; flex-direction:column; align-items:center; gap:0.75rem; animation:hintBob 2s ease-in-out infinite; opacity:0.6; }
+        .scroll-hint-line { width:1px; height:32px; background:linear-gradient(to bottom,var(--muted),transparent); }
+        @keyframes hintBob { 0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)} }
+
+        /* Regular Sections */
+        section.regular { padding:10rem 2.5rem; position:relative; background:var(--bg); }
+        section.regular.alt { background:var(--bg-alt); }
+        .container { max-width:1200px; margin:0 auto; }
+        .section-header { text-align:center; margin-bottom:6rem; }
+        .section-label { display:inline-flex; align-items:center; gap:0.6rem; font-size:0.72rem; font-weight:500; letter-spacing:0.15em; text-transform:uppercase; color:var(--accent); margin-bottom:1.25rem; }
+        .section-label::before { content:''; width:24px; height:1px; background:var(--accent); }
+        .section-title { font-family:'Instrument Serif',serif; font-size:clamp(2.5rem,5vw,4.5rem); font-weight:400; letter-spacing:-0.03em; line-height:1.05; margin-bottom:1.5rem; color:var(--text); }
+        .section-title em { font-style:italic; color:var(--accent); }
+        .section-desc { font-size:1.05rem; color:var(--muted); max-width:540px; line-height:1.6; font-weight:300; margin:0 auto; }
+
+        /* Cards */
+        .events-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; }
+        .event-card { background:rgba(255,255,255,0.4); border:1px solid var(--border); border-radius:24px; overflow:hidden; transition:all 0.5s cubic-bezier(0.76,0,0.24,1); position:relative; backdrop-filter:blur(10px); }
+        .event-card:hover { transform:translateY(-6px); background:rgba(255,255,255,0.6); border-color:rgba(201,84,42,0.3); box-shadow:0 20px 40px rgba(42,37,32,0.08); }
+        .event-image { height:220px; background:linear-gradient(135deg,#2a2520,#1a1612); position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center; }
+        .event-image-shape { font-family:'Instrument Serif',serif; font-size:5rem; color:rgba(244,237,228,0.1); font-style:italic; }
+        .event-tag { position:absolute; top:1rem; left:1rem; background:var(--accent); color:var(--text-light); padding:0.35rem 0.85rem; border-radius:100px; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; }
+        .event-tag.exclusive { background:var(--text); color:var(--bg); }
+        .event-info { padding:1.75rem; }
+        .event-date { font-size:0.7rem; color:var(--accent); font-weight:500; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:0.5rem; }
+        .event-info h3 { font-family:'Instrument Serif',serif; font-size:1.5rem; font-weight:400; margin-bottom:0.6rem; letter-spacing:-0.02em; color:var(--text); }
+        .event-info p { font-size:0.88rem; color:var(--muted); line-height:1.6; margin-bottom:1.5rem; font-weight:300; }
+        .event-meta { display:flex; justify-content:space-between; align-items:center; padding-top:1.25rem; border-top:1px solid var(--border); }
+        .event-price { font-family:'Instrument Serif',serif; font-size:1.5rem; color:var(--text); }
+        .event-price small { font-size:0.65rem; color:var(--muted); display:block; font-family:'Inter',sans-serif; letter-spacing:0.05em; text-transform:uppercase; }
+
+        /* Pricing */
+        .pricing-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; }
+        .pricing-card { background:rgba(255,255,255,0.4); border:1px solid var(--border); border-radius:24px; padding:2.5rem; transition:all 0.5s cubic-bezier(0.76,0,0.24,1); position:relative; backdrop-filter:blur(10px); }
+        .pricing-card:hover { transform:translateY(-6px); background:rgba(255,255,255,0.6); box-shadow:0 20px 40px rgba(42,37,32,0.08); }
+        .pricing-card.featured { background:linear-gradient(160deg,rgba(201,84,42,0.08),rgba(201,84,42,0.02)); border-color:rgba(201,84,42,0.3); }
+        .pricing-popular { position:absolute; top:-10px; left:50%; transform:translateX(-50%); background:var(--accent); color:var(--text-light); padding:0.3rem 1rem; border-radius:100px; font-size:0.65rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; }
+        .pricing-tier { font-size:0.7rem; font-weight:500; letter-spacing:0.15em; text-transform:uppercase; color:var(--accent); margin-bottom:1rem; }
+        .pricing-amount { font-family:'Instrument Serif',serif; font-size:3.5rem; font-weight:400; margin-bottom:0.25rem; color:var(--text); letter-spacing:-0.02em; }
+        .pricing-desc { color:var(--muted); font-size:0.88rem; margin-bottom:2rem; font-weight:300; line-height:1.5; }
+        .pricing-features { list-style:none; margin-bottom:2.5rem; display:flex; flex-direction:column; gap:0.75rem; }
+        .pricing-features li { font-size:0.88rem; color:var(--text); display:flex; align-items:center; gap:0.6rem; }
+        .pricing-features li::before { content:''; width:16px; height:1px; background:var(--accent); flex-shrink:0; }
+
+        /* Testimonials */
+        .testimonials-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; }
+        .testimonial-card { background:rgba(255,255,255,0.4); border:1px solid var(--border); padding:2.25rem; border-radius:24px; transition:all 0.4s ease; backdrop-filter:blur(10px); }
+        .testimonial-card:hover { background:rgba(255,255,255,0.6); transform:translateY(-4px); box-shadow:0 20px 40px rgba(42,37,32,0.08); }
+        .testimonial-text { font-family:'Instrument Serif',serif; font-size:1.15rem; line-height:1.5; color:var(--text); margin-bottom:2rem; font-style:italic; letter-spacing:-0.01em; }
+        .testimonial-author { display:flex; align-items:center; gap:0.85rem; }
+        .testimonial-avatar { width:40px; height:40px; border-radius:50%; background:linear-gradient(135deg,var(--accent),#ff006e); display:flex; align-items:center; justify-content:center; color:var(--text-light); font-weight:600; font-size:0.75rem; }
+        .testimonial-name { font-weight:500; font-size:0.88rem; color:var(--text); }
+        .testimonial-role { font-size:0.72rem; color:var(--muted); }
+
+        /* CTA */
+        .cta-section { text-align:center; position:relative; overflow:hidden; }
+        .cta-section::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at center,rgba(201,84,42,0.12),transparent 60%); pointer-events:none; }
+        .cta-content { position:relative; z-index:2; }
+
+        /* Stats bar */
+        .stats-bar { background:var(--bg-dark); padding:3rem 2.5rem; }
+        .stats-inner { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:repeat(4,1fr); gap:2rem; text-align:center; }
+        .stat-num { font-family:'Instrument Serif',serif; font-size:3rem; font-weight:400; color:var(--bg); letter-spacing:-0.03em; }
+        .stat-num em { color:var(--accent); font-style:italic; }
+        .stat-label { font-size:0.75rem; color:rgba(244,237,228,0.5); text-transform:uppercase; letter-spacing:0.12em; margin-top:0.5rem; }
+
+        /* Modal */
+        .modal-overlay { position:fixed; inset:0; background:rgba(42,37,32,0.6); backdrop-filter:blur(20px); z-index:10000; display:flex; align-items:center; justify-content:center; opacity:0; visibility:hidden; transition:all 0.4s ease; padding:2rem; }
+        .modal-overlay.active { opacity:1; visibility:visible; }
+        .modal { background:var(--bg); border:1px solid var(--border); border-radius:28px; padding:2.5rem; max-width:500px; width:100%; max-height:90vh; overflow-y:auto; transform:translateY(20px) scale(0.97); transition:transform 0.4s cubic-bezier(0.76,0,0.24,1); position:relative; box-shadow:0 30px 80px rgba(42,37,32,0.25); }
+        .modal-overlay.active .modal { transform:translateY(0) scale(1); }
+        .modal-close { position:absolute; top:1.25rem; right:1.25rem; width:32px; height:32px; border:1px solid var(--border); background:none; border-radius:50%; cursor:pointer; display:flex; align-items:center; justify-content:center; color:var(--text); font-size:0.85rem; transition:all 0.3s ease; }
+        .modal-close:hover { background:var(--accent); color:var(--text-light); border-color:var(--accent); }
+        .modal h2 { font-family:'Instrument Serif',serif; font-size:1.85rem; font-weight:400; margin-bottom:0.4rem; color:var(--text); font-style:italic; letter-spacing:-0.02em; }
+        .modal > p { color:var(--muted); font-size:0.88rem; margin-bottom:2rem; font-weight:300; }
+        .form-group { margin-bottom:1rem; }
+        .form-group label { display:block; font-size:0.72rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:0.5rem; color:var(--muted); }
+        .form-group input, .form-group select, .form-group textarea { width:100%; padding:0.85rem 1rem; background:rgba(255,255,255,0.5); border:1px solid var(--border); border-radius:12px; font-family:'Inter',sans-serif; font-size:0.88rem; color:var(--text); outline:none; transition:border-color 0.3s ease; }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color:var(--accent); }
+        .form-group textarea { resize:vertical; min-height:100px; }
+        .form-row { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+        .form-checkbox { display:flex; align-items:flex-start; gap:0.75rem; margin-bottom:1.5rem; }
+        .form-checkbox input { margin-top:0.15rem; accent-color:var(--accent); }
+        .form-checkbox label { font-size:0.75rem; color:var(--muted); line-height:1.5; }
+        .form-submit { width:100%; justify-content:center; padding:1rem; }
+        .form-success { text-align:center; padding:2rem 0; display:none; }
+        .form-success-icon { width:56px; height:56px; border-radius:50%; background:rgba(201,84,42,0.1); border:1px solid rgba(201,84,42,0.2); display:flex; align-items:center; justify-content:center; margin:0 auto 1.5rem; color:var(--accent); font-size:1.4rem; }
+        .form-success h3 { font-family:'Instrument Serif',serif; font-size:1.6rem; margin-bottom:0.75rem; color:var(--text); }
+        .form-success p { color:var(--muted); font-size:0.88rem; }
+        .form-content.hidden { display:none; }
+
+        /* Leaderboard */
+        .leaderboard { max-width:800px; margin:0 auto; }
+        .leaderboard-item { display:grid; grid-template-columns:50px 1fr auto auto; align-items:center; gap:1.5rem; padding:1.5rem; border-bottom:1px solid var(--border); transition:all 0.4s ease; }
+        .leaderboard-item:hover { background:rgba(255,255,255,0.3); padding-left:2rem; }
+        .leaderboard-rank { font-family:'Instrument Serif',serif; font-size:1.5rem; color:var(--muted); font-style:italic; }
+        .leaderboard-item:nth-child(1) .leaderboard-rank { color:var(--accent); }
+        .leaderboard-user { display:flex; align-items:center; gap:1rem; }
+        .leaderboard-avatar { width:44px; height:44px; border-radius:50%; background:linear-gradient(135deg,var(--accent),#ff006e); display:flex; align-items:center; justify-content:center; font-weight:600; color:var(--text-light); font-size:0.8rem; }
+        .leaderboard-name { font-weight:500; font-size:0.95rem; margin-bottom:0.15rem; color:var(--text); }
+        .leaderboard-handle { font-size:0.78rem; color:var(--muted); }
+        .leaderboard-views { font-family:'Instrument Serif',serif; font-size:1.2rem; text-align:right; color:var(--text); }
+        .leaderboard-views small { display:block; font-size:0.65rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.08em; font-family:'Inter',sans-serif; }
+        .leaderboard-badge { padding:0.35rem 0.85rem; border-radius:100px; font-size:0.65rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; }
+        .badge-invited { background:rgba(201,84,42,0.1); color:var(--accent); border:1px solid rgba(201,84,42,0.2); }
+        .badge-rising { background:rgba(52,130,89,0.1); color:#2d7a4a; border:1px solid rgba(52,130,89,0.2); }
+        .badge-new { background:rgba(26,26,26,0.05); color:var(--muted); border:1px solid var(--border); }
+
+        /* Footer */
+        footer { background:var(--bg-dark); color:var(--bg); padding:5rem 2.5rem 2rem; }
+        .footer-main { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:4rem; max-width:1200px; margin:0 auto; padding-bottom:3rem; border-bottom:1px solid rgba(244,237,228,0.1); }
+        .footer-brand h3 { font-family:'Instrument Serif',serif; font-size:1.5rem; font-weight:400; margin-bottom:1rem; letter-spacing:-0.02em; font-style:italic; color:var(--bg); }
+        .footer-brand p { color:rgba(244,237,228,0.5); font-size:0.85rem; line-height:1.6; max-width:280px; font-weight:300; }
+        .footer-column h4 { font-size:0.7rem; font-weight:500; letter-spacing:0.15em; text-transform:uppercase; margin-bottom:1.25rem; color:rgba(244,237,228,0.5); }
+        .footer-column a { display:block; color:var(--bg); text-decoration:none; font-size:0.85rem; padding:0.35rem 0; transition:color 0.3s ease; font-weight:300; }
+        .footer-column a:hover { color:var(--accent); }
+        .footer-bottom { max-width:1200px; margin:0 auto; padding-top:2rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; }
+        .footer-bottom p { color:rgba(244,237,228,0.5); font-size:0.75rem; }
+        .footer-bottom-links { display:flex; gap:2rem; }
+        .footer-bottom-links a { color:rgba(244,237,228,0.5); text-decoration:none; font-size:0.75rem; transition:color 0.3s ease; }
+        .footer-bottom-links a:hover { color:var(--accent); }
+
+        /* Reveal */
+        .reveal { opacity:0; transform:translateY(30px); transition:all 0.8s cubic-bezier(0.76,0,0.24,1); }
+        .reveal.active { opacity:1; transform:translateY(0); }
+
+        /* Responsive */
+        @media (max-width:1024px) {
+            .scene-inner { grid-template-columns:1fr; gap:2rem; text-align:center; }
+            .scene-text { align-items:center; }
+            .scene-desc { margin:0 auto; }
+            .scene-visual { height:250px; }
+            .scene-stats { justify-content:center; }
+            .events-grid, .pricing-grid, .testimonials-grid { grid-template-columns:1fr; }
+            .footer-main { grid-template-columns:1fr 1fr; gap:3rem; }
+            .icon-3d { width:64px; height:64px; border-radius:18px; }
+            .phone-container { width:260px; height:520px; }
+            .stats-inner { grid-template-columns:repeat(2,1fr); }
+        }
+        @media (max-width:768px) {
+            nav { padding:1rem 1.5rem; }
+            .nav-links { display:none; }
+            .menu-toggle { display:flex; }
+            .scroll-stage { height:500vh; }
+            .scene { padding:6rem 1.5rem 2rem; }
+            .scene-title { font-size:2rem; }
+            section.regular { padding:6rem 1.5rem; }
+            .stats-inner { grid-template-columns:repeat(2,1fr); }
+            .footer-main { grid-template-columns:1fr; gap:2.5rem; }
+            .footer-bottom { flex-direction:column; text-align:center; }
+            .form-row { grid-template-columns:1fr; }
+            .icon-3d { width:50px; height:50px; border-radius:14px; }
+            .phone-container { width:220px; height:440px; }
+        }
+    </style>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">emailjs.init("8Y6cgX7I-ikMtQBe3");</script>
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-logo">BrandCrafters</div>
+        <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+    </div>
+
+    <!-- Nav -->
+    <nav id="mainNav" role="navigation" aria-label="Main navigation">
+        <a href="index.html" class="nav-logo" aria-label="BrandCrafters Home">BrandCrafters</a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="influencer.html">Influencer</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html" class="nav-cta">Get Started</a></li>
+        </ul>
+        <div class="menu-toggle" id="menuToggle" aria-label="Toggle menu" role="button" tabindex="0">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="influencer.html">Influencer</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Get Started</a>
+    </div>
+
+    <!-- Progress Dots -->
+    <div class="progress-indicator" id="progressIndicator" aria-hidden="true">
+        <div class="progress-dot active" data-label="Welcome"></div>
+        <div class="progress-dot" data-label="Social Media"></div>
+        <div class="progress-dot" data-label="Content"></div>
+        <div class="progress-dot" data-label="Launches"></div>
+        <div class="progress-dot" data-label="Influencer"></div>
+        <div class="progress-dot" data-label="Inquiries"></div>
+    </div>
+
+    <!-- SCROLL STAGE -->
+    <div class="scroll-stage" id="scrollStage">
+        <div class="stage-sticky">
+            <div class="ambient-bg"></div>
+            <div class="noise-overlay"></div>
+
+            <!-- Icon Stage -->
+            <div class="icon-stage" id="iconStage">
+                <!-- Instagram -->
+                <div class="icon-3d icon-instagram" id="icon-instagram" role="img" aria-label="Instagram">
+                    <div class="icon-3d-inner">
+                        <svg viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </div>
+                </div>
+                <!-- TikTok -->
+                <div class="icon-3d icon-tiktok" id="icon-tiktok" role="img" aria-label="TikTok">
+                    <div class="icon-3d-inner">
+                        <svg viewBox="0 0 24 24" fill="white"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.73a8.25 8.25 0 004.83 1.55V6.84a4.85 4.85 0 01-1.06-.15z"/></svg>
+                    </div>
+                </div>
+                <!-- YouTube -->
+                <div class="icon-3d icon-youtube" id="icon-youtube" role="img" aria-label="YouTube">
+                    <div class="icon-3d-inner">
+                        <svg viewBox="0 0 24 24" fill="white"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    </div>
+                </div>
+                <!-- Snapchat -->
+                <div class="icon-3d icon-snapchat" id="icon-snapchat" role="img" aria-label="Snapchat">
+                    <div class="icon-3d-inner">
+                        <svg viewBox="0 0 24 24" fill="#333"><path d="M12.166.006C10.316-.019 6.698.467 4.915 4.079c-.74 1.514-.563 4.098-.475 5.69l-.001.038c-.008.106-.065.397-.34.397-.22 0-.512-.14-.858-.14a1.47 1.47 0 00-.429.063C2.499 10.233 2 10.727 2 11.351c0 .71.567 1.232 1.388 1.458.052.015.103.027.153.038.564.126.946.362 1.093.68.101.215.079.467-.063.745-.528 1.018-2.173 1.75-2.173 2.858 0 .63.523.965.984.965.154 0 .305-.03.441-.09.344-.148.627-.222.843-.222.197 0 .34.052.425.095-.017.239-.026.479-.026.715 0 2.065 1.668 4.208 4.803 4.208.12 0 .244-.004.37-.012.63-.043 1.209-.264 1.763-.264.554 0 1.134.221 1.763.264.126.008.25.012.37.012 3.135 0 4.803-2.143 4.803-4.208 0-.236-.009-.476-.026-.715.085-.043.228-.095.425-.095.216 0 .499.074.843.222.136.06.287.09.441.09.461 0 .984-.335.984-.965 0-1.108-1.645-1.84-2.173-2.858-.142-.278-.164-.53-.063-.745.147-.318.529-.554 1.093-.68.05-.011.101-.023.153-.038.821-.226 1.388-.748 1.388-1.458 0-.624-.499-1.118-.812-1.225a1.47 1.47 0 00-.429-.063c-.346 0-.638.14-.858.14-.275 0-.332-.291-.34-.397l-.001-.038c.088-1.592.265-4.176-.475-5.69C17.502.467 13.884-.019 12.166.006z"/></svg>
+                    </div>
+                </div>
+                <!-- Twitter/X -->
+                <div class="icon-3d icon-twitter" id="icon-twitter" role="img" aria-label="X (Twitter)">
+                    <div class="icon-3d-inner">
+                        <svg viewBox="0 0 24 24" fill="white"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </div>
+                </div>
+                <!-- Facebook -->
+                <div class="icon-3d icon-facebook" id="icon-facebook" role="img" aria-label="Facebook">
+                    <div class="icon-3d-inner">
+                        <svg viewBox="0 0 24 24" fill="white"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="phone-container" id="phoneContainer">
+                <div class="phone-frame">
+                    <div class="phone-screen">
+                        <div class="phone-notch"></div>
+                        <div class="phone-time">9:41</div>
+                        <div class="phone-greeting">Your brand, everywhere.</div>
+                        <div class="phone-headline">All platforms. One strategy.</div>
+                        <div class="phone-icon-grid">
+                            <div class="phone-icon-slot" data-target="instagram"></div>
+                            <div class="phone-icon-slot" data-target="tiktok"></div>
+                            <div class="phone-icon-slot" data-target="youtube"></div>
+                            <div class="phone-icon-slot" data-target="snapchat"></div>
+                            <div class="phone-icon-slot" data-target="twitter"></div>
+                            <div class="phone-icon-slot" data-target="facebook"></div>
+                        </div>
+                        <div class="phone-home-bar"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SCENE 0: HERO -->
+            <div class="scene scene-hero active" data-scene="0">
+                <div class="scene-inner">
+                    <div class="scene-text" style="align-items:center;">
+                        <div class="hero-badge">
+                            <div class="hero-badge-dot"></div>
+                            <span>Vadodara's Digital Growth Partner</span>
+                        </div>
+                        <h1 class="hero-title">We craft <em>digital growth</em><br>for brands &amp; <em>influencers.</em></h1>
+                        <p class="hero-sub">BrandCrafters helps founders, startups, local businesses, and influencers build a stronger social media presence, launch products, and generate real inquiries.</p>
+                        <div class="hero-buttons">
+                            <a href="#" class="btn-primary" onclick="openModal(); return false;">Grow My Business</a>
+                            <a href="services.html" class="btn-outline">See Our Services</a>
+                        </div>
+                        <div class="scene-stats" style="margin-top:2rem;">
+                            <div><div class="scene-stat-num"><em>1,500+</em></div><div class="scene-stat-label">Businesses Served</div></div>
+                            <div><div class="scene-stat-num"><em>8+</em></div><div class="scene-stat-label">Service Categories</div></div>
+                            <div><div class="scene-stat-num"><em>100%</em></div><div class="scene-stat-label">Growth-Focused</div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-hint">
+                    <span>Scroll to explore</span>
+                    <div class="scroll-hint-line"></div>
+                </div>
+            </div>
+
+            <!-- SCENE 1 -->
+            <div class="scene" data-scene="1">
+                <div class="scene-inner">
+                    <div class="scene-text">
+                        <span class="scene-label">Social Media Management</span>
+                        <h2 class="scene-title">Professional<br>presence on <em>every platform.</em></h2>
+                        <p class="scene-desc">We manage your Instagram, Facebook, and LinkedIn with a clear content plan, professional design, and consistent brand communication — so your social media works for your business.</p>
+                        <div class="scene-stats">
+                            <div><div class="scene-stat-num"><em>3+</em></div><div class="scene-stat-label">Platforms Managed</div></div>
+                            <div><div class="scene-stat-num"><em>Monthly</em></div><div class="scene-stat-label">Content Calendars</div></div>
+                        </div>
+                    </div>
+                    <div class="scene-visual" id="anchor-instagram"></div>
+                </div>
+            </div>
+
+            <!-- SCENE 2 -->
+            <div class="scene" data-scene="2">
+                <div class="scene-inner">
+                    <div class="scene-visual" id="anchor-tiktok"></div>
+                    <div class="scene-text">
+                        <span class="scene-label">Content Strategy &amp; Design</span>
+                        <h2 class="scene-title">Content that<br>builds <em>real trust.</em></h2>
+                        <p class="scene-desc">We create static posts, carousels, Reels covers, story creatives, and launch campaigns — all designed to make your business look credible, premium, and easy to understand.</p>
+                        <div class="scene-stats">
+                            <div><div class="scene-stat-num"><em>6+</em></div><div class="scene-stat-label">Content Formats</div></div>
+                            <div><div class="scene-stat-num"><em>Strategy-led</em></div><div class="scene-stat-label">Every Post</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SCENE 3 -->
+            <div class="scene" data-scene="3">
+                <div class="scene-inner">
+                    <div class="scene-text">
+                        <span class="scene-label">Product &amp; Service Launches</span>
+                        <h2 class="scene-title">Launch with<br><em>clarity and impact.</em></h2>
+                        <p class="scene-desc">From pre-launch buzz to announcement day to inquiry-focused follow-up — we handle the entire campaign so your product or service gets the attention it deserves.</p>
+                        <div class="scene-stats">
+                            <div><div class="scene-stat-num"><em>Pre → Post</em></div><div class="scene-stat-label">Full Launch Support</div></div>
+                            <div><div class="scene-stat-num"><em>Inquiry</em></div><div class="scene-stat-label">Focused Campaigns</div></div>
+                        </div>
+                    </div>
+                    <div class="scene-visual" id="anchor-youtube"></div>
+                </div>
+            </div>
+
+            <!-- SCENE 4 -->
+            <div class="scene" data-scene="4">
+                <div class="scene-inner" style="grid-template-columns:1fr;text-align:center;justify-items:center;">
+                    <div class="scene-text" style="align-items:center;">
+                        <span class="scene-label">Influencer Marketing. Done Right.</span>
+                        <h2 class="scene-title">Collaborate <em>safely.</em><br>Grow <em>faster.</em></h2>
+                        <p class="scene-desc" style="margin:0 auto;">Brands get safe, structured influencer campaigns. Creators get professional growth, media kits, and real collaboration opportunities. One platform, both sides covered.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SCENE 5 -->
+            <div class="scene" data-scene="5">
+                <div class="scene-inner" style="grid-template-columns:1fr;text-align:center;justify-items:center;">
+                    <div class="scene-text" style="align-items:center;">
+                        <span class="scene-label">From Attention to Action</span>
+                        <h2 class="scene-title">Turn followers<br>into <em>real inquiries.</em></h2>
+                        <p class="scene-desc" style="margin:0 auto;">We build content journeys that encourage people to call, message, book, and visit. Strategy, design, execution — all under one roof, all pointed at your business goals.</p>
+                        <div class="hero-buttons" style="margin-top:2rem;">
+                            <a href="#" class="btn-primary" onclick="openModal(); return false;">Book a Free Strategy Call</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+        <div class="stats-inner">
+            <div><div class="stat-num"><em>1,500+</em></div><div class="stat-label">Businesses Helped</div></div>
+            <div><div class="stat-num"><em>8+</em></div><div class="stat-label">Service Types</div></div>
+            <div><div class="stat-num"><em>6</em></div><div class="stat-label">Platforms Managed</div></div>
+            <div><div class="stat-num"><em>100%</em></div><div class="stat-label">Growth-Focused</div></div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section class="regular" id="services">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">What We Do</span>
+                <h2 class="section-title">Services designed to turn<br>social media into <em>business growth.</em></h2>
+                <p class="section-desc">We do more than posting. We understand your business, plan your content, create your brand message, and help your social media presence work toward real business response.</p>
+            </div>
+            <div class="events-grid">
+                <div class="event-card reveal">
+                    <div class="event-image"><span class="event-image-shape">01</span><span class="event-tag">Core Service</span></div>
+                    <div class="event-info">
+                        <span class="event-date">Social Media Management</span>
+                        <h3>Always-On Brand Presence</h3>
+                        <p>Instagram, Facebook, and LinkedIn management with monthly content calendars, caption writing, story creatives, and consistent brand communication.</p>
+                        <div class="event-meta">
+                            <div class="event-price">Monthly<small>Ongoing Support</small></div>
+                            <a href="services.html" style="color:var(--accent);font-size:0.8rem;font-weight:500;text-decoration:none;">Get started →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="event-card reveal">
+                    <div class="event-image"><span class="event-image-shape">02</span><span class="event-tag exclusive">Launch</span></div>
+                    <div class="event-info">
+                        <span class="event-date">Product &amp; Service Launches</span>
+                        <h3>Launch With Clarity &amp; Impact</h3>
+                        <p>Pre-launch content, launch announcement, offer creatives, story campaigns, and influencer launch support — everything needed for a professional debut.</p>
+                        <div class="event-meta">
+                            <div class="event-price">Campaign<small>Full Launch Support</small></div>
+                            <a href="services.html#launches" style="color:var(--accent);font-size:0.8rem;font-weight:500;text-decoration:none;">Plan my launch →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="event-card reveal">
+                    <div class="event-image"><span class="event-image-shape">03</span><span class="event-tag">Growth</span></div>
+                    <div class="event-info">
+                        <span class="event-date">Lead &amp; Inquiry Generation</span>
+                        <h3>Turn Attention Into Inquiries</h3>
+                        <p>DM and WhatsApp CTA planning, offer posts, lead magnet ideas, inquiry scripts, and follow-up message templates that convert followers into customers.</p>
+                        <div class="event-meta">
+                            <div class="event-price">Strategy<small>Conversion-Focused</small></div>
+                            <a href="services.html#leads" style="color:var(--accent);font-size:0.8rem;font-weight:500;text-decoration:none;">Generate inquiries →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align:center;margin-top:3rem;">
+                <a href="services.html" class="btn-primary">View All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries -->
+    <section class="regular alt" id="industries">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Industries We Serve</span>
+                <h2 class="section-title">Built for your <em>business category.</em></h2>
+                <p class="section-desc">Every business needs a different communication style. BrandCrafters builds content and campaigns based on your category, audience, and growth goal.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal">
+                    <p class="testimonial-text">"Most businesses know they should be active on social media — but they don't know what to post, how to present their offer, or how to turn attention into inquiries. We fill that gap."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">BC</div>
+                        <div><div class="testimonial-name">BrandCrafters Team</div><div class="testimonial-role">Strategy · Content · Execution</div></div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal">
+                    <p class="testimonial-text">"We work with beauty clinics, restaurants, startups, real estate firms, fashion brands, education businesses, and local influencers — each getting a strategy built for their world."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="background:linear-gradient(135deg,#667eea,#764ba2);">BC</div>
+                        <div><div class="testimonial-name">Industry Expertise</div><div class="testimonial-role">1,500+ businesses served across Vadodara &amp; beyond</div></div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal">
+                    <p class="testimonial-text">"For influencers, we help local creators become professional, brand-ready, and capable of attracting paid collaborations with local and national brands."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="background:linear-gradient(135deg,#f093fb,#f5576c);">BC</div>
+                        <div><div class="testimonial-name">Creator Program</div><div class="testimonial-role">Local to national influencer growth</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="regular cta-section">
+        <div class="container cta-content reveal">
+            <span class="section-label" style="justify-content:center;">Your Brand Deserves More</span>
+            <h2 class="section-title">Ready to build a professional<br><em>social media presence?</em></h2>
+            <p class="section-desc" style="margin-bottom:2.5rem;">Your business deserves more than random posting. Let BrandCrafters help you build presence, spread your brand voice, and turn attention into real inquiries.</p>
+            <div class="hero-buttons" style="justify-content:center;">
+                <a href="#" class="btn-primary" onclick="openModal(); return false;">Book a Free Brand Strategy Call</a>
+                <a href="tel:+919638955666" class="btn-outline">+91 96389 55666</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-main">
+            <div class="footer-brand">
+                <h3>BrandCrafters</h3>
+                <p>We craft digital growth for businesses, brands, founders, and influencers. From visibility to inquiries, from content to collaborations.</p>
+                <p style="margin-top:1rem;font-size:0.78rem;color:rgba(244,237,228,0.4);">GF-15, Sharnam Fortune, Opp. Inox,<br>Beside Sterling Hospital, Race Course, Vadodara</p>
+            </div>
+            <div class="footer-column">
+                <h4>Pages</h4>
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="influencer.html">Influencer</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-column">
+                <h4>Services</h4>
+                <a href="services.html">Social Media Management</a>
+                <a href="services.html#content">Content Strategy</a>
+                <a href="services.html#launches">Product Launches</a>
+                <a href="services.html#leads">Inquiry Generation</a>
+            </div>
+            <div class="footer-column">
+                <h4>Contact</h4>
+                <a href="tel:+919638955666">+91 96389 55666</a>
+                <a href="mailto:brand.crafters06@gmail.com">brand.crafters06@gmail.com</a>
+                <a href="https://wa.me/919638955666" target="_blank" rel="noopener">WhatsApp Us</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 BrandCrafters. All rights reserved. Vadodara, Gujarat, India.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Modal -->
+    <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal">
+            <button class="modal-close" onclick="closeModal()" aria-label="Close modal">✕</button>
+            <div class="form-content" id="formContent">
+                <h2 id="modalTitle">Book Your Free Brand Strategy Call</h2>
+                <p>Tell us about your goal and we'll help you build the right growth plan.</p>
+                <form id="enquiryForm" onsubmit="submitForm(event)">
+                    
+            <div class="form-error" id="formError" style="display:none;background:rgba(200,50,50,0.08);border:1px solid rgba(200,50,50,0.25);color:#a83232;padding:1rem 1.25rem;border-radius:12px;font-size:0.85rem;margin-bottom:1rem;line-height:1.5;"></div>
+<div class="form-row">
+                        <div class="form-group"><label>Full Name</label><input name="from_name" type="text" placeholder="Your name" required></div>
+                        <div class="form-group"><label>Business / Creator Name</label><input name="business_name" type="text" placeholder="Brand name" required></div>
+                    </div>
+                    <div class="form-group"><label>Phone / WhatsApp</label><input name="phone" type="tel" placeholder="+91 00000 00000" required></div>
+                    <div class="form-group"><label>Email Address</label><input name="from_email" type="email" placeholder="you@example.com" required></div>
+                    <div class="form-row">
+                        <div class="form-group"><label>Instagram Handle</label><input name="instagram" type="text" placeholder="@yourhandle"></div>
+                        <div class="form-group"><label>Website (if any)</label><input name="website" type="text" placeholder="yourwebsite.com"></div>
+                    </div>
+                    <div class="form-group">
+                        <label>I am interested in</label>
+                        <select name="service_interest" required>
+                            <option value="">Select a service</option>
+                            <option>Business Growth &amp; Social Media Management</option>
+                            <option>Product Launch</option>
+                            <option>Service Launch</option>
+                            <option>Influencer Marketing for My Brand</option>
+                            <option>Influencer Growth (I am a creator)</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group"><label>Tell us about your goal</label><textarea name="message" placeholder="What do you want to achieve with BrandCrafters?" required></textarea></div>
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="terms" name="terms_agreed" required>
+                        <label for="terms">I agree to be contacted by BrandCrafters via WhatsApp, email, or phone regarding my inquiry.</label>
+                    </div>
+                    <button type="submit" class="btn-primary form-submit">Submit Inquiry</button>
+                </form>
+            </div>
+            <div class="form-success" id="formSuccess">
+                <div class="form-success-icon">✓</div>
+                <h3>Inquiry received!</h3>
+                <p>We'll review your details and get back to you within 24 hours via WhatsApp or email.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Loader
+        window.addEventListener('load', () => {
+            setTimeout(() => document.getElementById('loader').classList.add('hidden'), 2200);
+        });
+
+        // Nav scroll
+        window.addEventListener('scroll', () => {
+            document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 50);
+            const stage = document.getElementById('scrollStage');
+            const inStage = window.scrollY > 100 && window.scrollY < stage.offsetTop + stage.offsetHeight;
+            document.getElementById('progressIndicator').classList.toggle('visible', inStage);
+        });
+
+        // Mobile menu
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+        mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+            menuToggle.classList.remove('active');
+            mobileMenu.classList.remove('active');
+        }));
+
+        // Modal
+        function openModal() {
+            document.getElementById('modalOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal() {
+            document.getElementById('modalOverlay').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        document.getElementById('modalOverlay').addEventListener('click', e => { if(e.target === e.currentTarget) closeModal(); });
+        function submitForm(e) {
+            e.preventDefault();
+            const form = e.target;
+            const btn = form.querySelector('[type="submit"]');
+            const errorBox = document.getElementById('formError');
+            const originalText = btn.innerHTML;
+
+            if (errorBox) { errorBox.style.display = 'none'; errorBox.textContent = ''; }
+
+            // Basic required-field check with visible feedback
+            const required = form.querySelectorAll('[required]');
+            for (const field of required) {
+                if (field.type === 'checkbox' && !field.checked) {
+                    showError('Please agree to be contacted before submitting.');
+                    field.focus();
+                    return;
+                }
+                if (field.type !== 'checkbox' && !field.value.trim()) {
+                    showError('Please fill in all required fields (' + (field.name || 'a field') + ' is missing).');
+                    field.focus();
+                    return;
+                }
+            }
+
+            function showError(msg) {
+                if (errorBox) {
+                    errorBox.textContent = msg;
+                    errorBox.style.display = 'block';
+                    errorBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else {
+                    alert(msg);
+                }
+            }
+
+            if (typeof emailjs === 'undefined') {
+                showError('Email service failed to load (ad-blocker or network issue?). Please WhatsApp us directly at +91 96389 55666, or refresh and try again.');
+                return;
+            }
+
+            btn.innerHTML = 'Sending...';
+            btn.disabled = true;
+
+            const formData = new FormData(form);
+            const templateParams = {};
+            formData.forEach((value, key) => {
+                templateParams[key] = value;
+            });
+            templateParams.page_source = 'Home Page';
+            templateParams.reply_to = templateParams.from_email || '';
+
+            emailjs.send('service_fazdche', 'template_v0o6bih', templateParams)
+                .then((response) => {
+                    console.log('EmailJS success:', response.status, response.text);
+                    const fc = document.getElementById('formContent');
+                    const fs = document.getElementById('formSuccess');
+                    if (fc) fc.classList.add('hidden');
+                    if (fs) fs.style.display = 'block';
+                })
+                .catch((err) => {
+                    console.error('EmailJS error:', err);
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                    let detail = '';
+                    if (err && err.text) detail = err.text;
+                    else if (err && err.message) detail = err.message;
+                    else detail = JSON.stringify(err);
+                    showError('Failed to send: ' + detail + ' — Please try again or WhatsApp us at +91 96389 55666.');
+                });
+        }
+
+        // Scroll Stage Animation
+        const scrollStage = document.getElementById('scrollStage');
+        const phoneContainer = document.getElementById('phoneContainer');
+        const scenes = document.querySelectorAll('.scene');
+        const progressDots = document.querySelectorAll('.progress-dot');
+        const icons = {
+            instagram: document.getElementById('icon-instagram'),
+            tiktok: document.getElementById('icon-tiktok'),
+            youtube: document.getElementById('icon-youtube'),
+            snapchat: document.getElementById('icon-snapchat'),
+            twitter: document.getElementById('icon-twitter'),
+            facebook: document.getElementById('icon-facebook')
+        };
+
+        const initialPositions = {
+            instagram: { x:0.15, y:0.25, rot:-15 },
+            tiktok:    { x:0.85, y:0.2,  rot:12  },
+            youtube:   { x:0.08, y:0.7,  rot:8   },
+            snapchat:  { x:0.88, y:0.65, rot:-10 },
+            twitter:   { x:0.25, y:0.85, rot:20  },
+            facebook:  { x:0.75, y:0.8,  rot:-8  }
+        };
+
+        const anchorPositions = {
+            1: { instagram:{x:0.78,y:0.35,scale:1.4,rot:10}, tiktok:{x:0.12,y:0.3,scale:0.9,rot:-8}, youtube:{x:0.85,y:0.7,scale:0.8,rot:15}, snapchat:{x:0.2,y:0.75,scale:0.7,rot:-12}, twitter:{x:0.65,y:0.15,scale:0.85,rot:5}, facebook:{x:0.3,y:0.15,scale:0.75,rot:-18} },
+            2: { instagram:{x:0.2,y:0.35,scale:0.85,rot:5}, tiktok:{x:0.72,y:0.4,scale:1.3,rot:-12}, youtube:{x:0.15,y:0.72,scale:0.7,rot:10}, snapchat:{x:0.82,y:0.25,scale:1.1,rot:-8}, twitter:{x:0.88,y:0.7,scale:0.8,rot:15}, facebook:{x:0.35,y:0.8,scale:0.7,rot:-5} },
+            3: { instagram:{x:0.15,y:0.3,scale:0.9,rot:-10}, tiktok:{x:0.85,y:0.35,scale:0.8,rot:8}, youtube:{x:0.75,y:0.55,scale:1.3,rot:-5}, snapchat:{x:0.25,y:0.65,scale:0.75,rot:12}, twitter:{x:0.5,y:0.15,scale:0.7,rot:-15}, facebook:{x:0.88,y:0.72,scale:0.85,rot:10} },
+            4: { instagram:{x:0.12,y:0.5,scale:1.1,rot:-8}, tiktok:{x:0.88,y:0.25,scale:1.2,rot:12}, youtube:{x:0.25,y:0.25,scale:0.9,rot:5}, snapchat:{x:0.75,y:0.7,scale:1.0,rot:-15}, twitter:{x:0.15,y:0.75,scale:0.85,rot:20}, facebook:{x:0.68,y:0.62,scale:1.1,rot:-15} },
+            5: { instagram:{x:0.5,y:0.5,scale:0.65,rot:0,dock:0}, tiktok:{x:0.5,y:0.5,scale:0.65,rot:0,dock:1}, youtube:{x:0.5,y:0.5,scale:0.65,rot:0,dock:2}, snapchat:{x:0.5,y:0.5,scale:0.65,rot:0,dock:3}, twitter:{x:0.5,y:0.5,scale:0.65,rot:0,dock:4}, facebook:{x:0.5,y:0.5,scale:0.65,rot:0,dock:5} }
+        };
+
+        const TOTAL_SCENES = 6;
+        let currentScene = -1;
+        let animationFrame = null;
+
+        function lerp(a,b,t){ return a+(b-a)*t; }
+        function easeInOut(t){ return t<0.5?2*t*t:1-Math.pow(-2*t+2,2)/2; }
+
+        function getPhoneSlotPosition(slotIndex){
+            const slots = phoneContainer.querySelectorAll('.phone-icon-slot');
+            if(!slots[slotIndex]) return null;
+            const r = slots[slotIndex].getBoundingClientRect();
+            return { x:r.left+r.width/2, y:r.top+r.height/2 };
+        }
+
+        function getFloatOffset(name,time){
+            const seeds = {instagram:0,tiktok:1.2,youtube:2.4,snapchat:3.6,twitter:4.8,facebook:6.0};
+            const seed = seeds[name]||0;
+            return { x:Math.sin(time/1800+seed)*8, y:Math.cos(time/2200+seed)*10 };
+        }
+
+        function updateIcons(){
+            const stageRect = scrollStage.getBoundingClientRect();
+            const stageHeight = scrollStage.offsetHeight - window.innerHeight;
+            const scrolled = Math.max(0,-stageRect.top);
+            const scrollProgress = Math.min(1,Math.max(0,scrolled/stageHeight));
+            const sceneFloat = scrollProgress*(TOTAL_SCENES-1);
+            const sceneIndex = Math.floor(sceneFloat);
+            const sceneT = easeInOut(sceneFloat-sceneIndex);
+            const targetSceneIndex = Math.min(sceneIndex,TOTAL_SCENES-1);
+
+            if(targetSceneIndex!==currentScene){
+                scenes.forEach((s,i)=>s.classList.toggle('active',i===targetSceneIndex));
+                progressDots.forEach((d,i)=>d.classList.toggle('active',i===targetSceneIndex));
+                currentScene=targetSceneIndex;
+            }
+
+            const showPhone = sceneFloat>=3.8;
+            phoneContainer.classList.toggle('visible',showPhone);
+            let phoneY;
+            if(sceneFloat<4) phoneY=window.innerHeight+200;
+            else if(sceneFloat<5){ const t=easeInOut(sceneFloat-4); phoneY=lerp(window.innerHeight+200,window.innerHeight/2,t); }
+            else phoneY=window.innerHeight/2;
+            phoneContainer.style.bottom=`${window.innerHeight-phoneY-(phoneContainer.offsetHeight/2)}px`;
+
+            const time=performance.now();
+            const vw=window.innerWidth, vh=window.innerHeight;
+
+            Object.keys(icons).forEach(name=>{
+                const icon=icons[name]; if(!icon) return;
+                let fromPos,toPos;
+                if(sceneIndex===0){ fromPos={...initialPositions[name],scale:1}; toPos=sceneFloat>0?{...anchorPositions[1][name],scale:anchorPositions[1][name].scale||1}:fromPos; }
+                else if(sceneIndex<TOTAL_SCENES-1){ fromPos={...anchorPositions[sceneIndex][name],scale:anchorPositions[sceneIndex][name].scale||1}; toPos={...anchorPositions[sceneIndex+1][name],scale:anchorPositions[sceneIndex+1][name].scale||1}; }
+                else{ fromPos={...anchorPositions[TOTAL_SCENES-1][name],scale:anchorPositions[TOTAL_SCENES-1][name].scale||1}; toPos=fromPos; }
+
+                let x=lerp(fromPos.x,toPos.x,sceneT);
+                let y=lerp(fromPos.y,toPos.y,sceneT);
+                let scale=lerp(fromPos.scale||1,toPos.scale||1,sceneT);
+                let rot=lerp(fromPos.rot||0,toPos.rot||0,sceneT);
+
+                if(sceneFloat>=4.5&&toPos.dock!==undefined){
+                    const slotPos=getPhoneSlotPosition(toPos.dock);
+                    if(slotPos){
+                        const dockT=easeInOut(Math.min(1,(sceneFloat-4.5)/0.5));
+                        x=lerp(x,slotPos.x/vw,dockT); y=lerp(y,slotPos.y/vh,dockT);
+                        scale=lerp(scale,0.6,dockT); rot=lerp(rot,0,dockT);
+                    }
+                }
+
+                let fx=0,fy=0;
+                if(sceneFloat<4.5){ const d=sceneFloat<4?1:1-(sceneFloat-4)/0.5; const o=getFloatOffset(name,time); fx=o.x*d; fy=o.y*d; }
+                const px=x*vw+fx, py=y*vh+fy;
+                const sz=icon.offsetWidth;
+                icon.style.left=`${px-sz/2}px`;
+                icon.style.top=`${py-sz/2}px`;
+                icon.style.transform=`scale(${scale}) rotateZ(${rot}deg)`;
+            });
+            animationFrame=requestAnimationFrame(updateIcons);
+        }
+
+        function initIcons(){
+            const vw=window.innerWidth, vh=window.innerHeight;
+            Object.keys(icons).forEach(name=>{
+                const icon=icons[name]; const pos=initialPositions[name]; const sz=icon.offsetWidth;
+                icon.style.left=`${pos.x*vw-sz/2}px`; icon.style.top=`${pos.y*vh-sz/2}px`;
+                icon.style.transform=`scale(1) rotateZ(${pos.rot}deg)`;
+            });
+        }
+
+        progressDots.forEach((dot,i)=>{
+            dot.addEventListener('click',()=>{
+                const sh=scrollStage.offsetHeight-window.innerHeight;
+                window.scrollTo({top:scrollStage.offsetTop+(sh*(i/(TOTAL_SCENES-1))),behavior:'smooth'});
+            });
+        });
+
+        window.addEventListener('load',()=>{ initIcons(); updateIcons(); });
+        window.addEventListener('resize',initIcons);
+
+        // Reveals
+        const revealObserver=new IntersectionObserver(entries=>{
+            entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('active'); });
+        },{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
+        document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
+
+        // Icon interactions
+        Object.values(icons).forEach(icon=>{
+            icon.addEventListener('mouseenter',()=>{ icon.style.transition='filter 0.3s ease'; icon.style.filter='brightness(1.2)'; });
+            icon.addEventListener('mouseleave',()=>{ icon.style.filter=''; });
+        });
+    </script>
+</body>
+</html>
