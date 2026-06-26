@@ -288,7 +288,7 @@
                         </div>
                         <div class="form-row">
                             <div class="form-group"><label>Phone / WhatsApp *</label><input name="phone" type="tel" placeholder="+91 00000 00000" required></div>
-                            <div class="form-group"><label>Email Address *</label><input name="from_email" type="email" placeholder="you@example.com" required></div>
+                            <div class="form-group"><label>Email Address *</label><input name="email" type="email" placeholder="you@example.com" required></div>
                         </div>
                         <div class="form-row">
                             <div class="form-group"><label>Instagram Handle</label><input name="instagram" type="text" placeholder="@yourhandle"></div>
@@ -497,7 +497,7 @@
                 templateParams[key] = value;
             });
             templateParams.page_source = 'Contact Page';
-            templateParams.reply_to = templateParams.from_email || '';
+            templateParams.reply_to = templateParams.email || '';
 
             emailjs.send('service_fazdche', 'template_5uidio5', templateParams)
                 .then((response) => {
