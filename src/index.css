@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Gujarati:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #FFFFFA;
+  --color-ink: #1B1849;
+  --color-charcoal: #5B5870;
+  --color-hairline: rgba(57,49,134,.14);
+  --color-lavender: #F4F2FC;
+  --color-violet: #393186;
+  --color-violet-bright: #393186;
+  --color-violet-mist: #F1EFFB;
+  --color-brand-purple: #393186;
+  --color-brand-yellow: #FBD847;
+  --color-brand-yellow-soft: #FFF4BE;
+  --color-brand-ivory: #FFFFFA;
+  --color-brand-purple-deep: #302874;
+  --font-display: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", "Noto Sans Gujarati", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; color-scheme: light; }
+body {
+  margin: 0;
+  font-size: 16px;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+button, input, select, textarea { font: inherit; }
+::selection { background: var(--color-brand-yellow); color: var(--color-brand-purple); }
+.font-display { font-family: var(--font-display); }
+.font-mono { font-family: var(--font-mono); }
+.hairline { border-color: var(--color-hairline); }
+.container-edge { padding-left: clamp(1.25rem, 5vw, 6rem); padding-right: clamp(1.25rem, 5vw, 6rem); }
+.focus-ring:focus-visible { outline: 2px solid var(--color-brand-purple); outline-offset: 4px; }
+.eyebrow {
+  font-family: var(--font-mono);
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  font-size: .72rem;
+  color: var(--color-brand-purple);
+}
+.brand-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: .78rem 1.45rem;
+  border-radius: 999px;
+  background: var(--color-brand-yellow);
+  color: var(--color-brand-purple);
+  font-size: .92rem;
+  font-weight: 700;
+  line-height: 1;
+  border: 1px solid rgba(57,49,134,.06);
+  box-shadow: 0 10px 30px rgba(57,49,134,.08);
+  transition: transform .25s ease, background-color .25s ease, color .25s ease, box-shadow .25s ease;
+}
+.brand-button:hover { transform: translateY(-1px); background: var(--color-brand-purple); color: #fff; box-shadow: 0 14px 34px rgba(57,49,134,.16); }
+.brand-button--small { min-height: 2.65rem; padding: .72rem 1.25rem; font-size: .84rem; }
+.brand-text-link { color: var(--color-ink); font-size: .92rem; font-weight: 600; text-decoration: underline; text-decoration-color: rgba(57,49,134,.35); text-underline-offset: 4px; transition: color .2s ease; }
+.brand-text-link:hover { color: var(--color-brand-purple); }
+.language-toggle { display: inline-flex;
+  padding: .22rem .3rem; border: 1px solid var(--color-hairline); border-radius: 999px; background: rgba(255,255,255,.72); align-items: center; gap: .35rem; font-size: .74rem; font-weight: 700; color: rgba(25,22,42,.58); white-space: nowrap; }
+.language-toggle button { border: 0; background: transparent; padding: .35rem .1rem; cursor: pointer; color: inherit; }
+.language-toggle button.is-active { color: var(--color-brand-purple); background: var(--color-brand-yellow); border-radius: 999px; padding-inline: .45rem; }
+.language-toggle button:hover { color: var(--color-brand-purple); }
+.brand-mark { display: inline-flex; align-items: center; min-width: 0; line-height: 0; }
+.brand-mark__logo { width: 150px; height: auto; max-height: 72px; object-fit: contain; object-position: center; flex: 0 0 auto; display: block; }
+.brand-mark--compact .brand-mark__logo { width: 120px; max-height: 68px; }
+.video-plate { position: relative; width: 100%; height: 100%; overflow: hidden; isolation: isolate; }
+.video-plate__media {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  filter: brightness(1.08) contrast(.94) saturate(.94);
+  transform: translateZ(0);
+}
+.video-plate__media--scroll { mix-blend-mode: multiply; }
+.video-plate__feather {
+  pointer-events: none;
+  position: absolute;
+  z-index: 2;
+  inset: -1px;
+  background: radial-gradient(ellipse 66% 64% at 50% 50%, transparent 42%, rgba(255,254,250,.25) 66%, var(--color-paper) 92%);
+  mix-blend-mode: normal;
+}
+.video-plate__shadow {
+  pointer-events: none;
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  bottom: 5%;
+  width: 44%;
+  height: 10%;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: radial-gradient(ellipse, rgba(57,49,134,.10), transparent 70%);
+  filter: blur(18px);
+}
+
+@media (max-width: 767px) {
+  .container-edge { padding-left: 1.1rem; padding-right: 1.1rem; }
+  .brand-mark--compact .brand-mark__logo { width: 108px; max-height: 62px; }
+  .language-toggle { font-size: .68rem; }
+  .video-plate__media { filter: brightness(1.10) contrast(.92) saturate(.90); }
+  .video-plate__feather { background: radial-gradient(ellipse 76% 70% at 50% 50%, transparent 38%, rgba(255,254,250,.26) 66%, var(--color-paper) 94%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}
+
+
+/* Brand-led visual rhythm: keep the premium editorial system, but give the site more color density. */
+.brand-tint-purple { background: linear-gradient(180deg, #F4F2FC 0%, #FCFBF7 100%); }
+.brand-tint-yellow { background: linear-gradient(180deg, #FFF9DD 0%, #FCFBF7 100%); }
+.brand-panel-purple { background: var(--color-brand-purple); color: #fff; }
+.brand-panel-purple .eyebrow { color: var(--color-brand-yellow); }
+.brand-panel-purple .hairline, .brand-panel-purple .border-t, .brand-panel-purple .border-b { border-color: rgba(255,255,255,.18) !important; }
+.brand-panel-purple .text-charcoal { color: rgba(255,255,255,.72); }
+.brand-panel-purple .text-violet, .brand-panel-purple .text-violet\/70, .brand-panel-purple .text-violet-bright { color: var(--color-brand-yellow) !important; }
+.brand-panel-purple .text-ink { color: #fff; }
+.brand-panel-purple .process-step:hover { background: rgba(255,255,255,.06); }
+.brand-accent-line { position: relative; }
+.brand-accent-line::after { content: ''; position: absolute; left: 0; bottom: -.45rem; width: 3rem; height: 3px; border-radius: 999px; background: var(--color-brand-yellow); }
+.hero-brand-glow { position: absolute; width: min(42vw, 34rem); height: min(42vw, 34rem); right: 6%; top: 17%; border-radius: 999px; background: radial-gradient(circle, rgba(255,204,1,.14), rgba(57,49,134,.07) 48%, transparent 72%); filter: blur(8px); pointer-events: none; }
+.video-plate__media {
+  mix-blend-mode: multiply;
+  filter: brightness(1.14) contrast(.88) saturate(.88);
+  -webkit-mask-image: radial-gradient(ellipse 70% 68% at 50% 50%, #000 48%, rgba(0,0,0,.92) 62%, transparent 91%);
+  mask-image: radial-gradient(ellipse 70% 68% at 50% 50%, #000 48%, rgba(0,0,0,.92) 62%, transparent 91%);
+}
+.video-plate__feather { background: radial-gradient(ellipse 68% 66% at 50% 50%, transparent 36%, rgba(252,251,247,.12) 58%, var(--color-paper) 91%); }
+@media (min-width: 768px) {
+  .desktop-reading-width { max-width: 48rem; }
+}
+@media (max-width: 767px) {
+  body { font-size: 17px; }
+  .brand-mark--compact .brand-mark__logo { width: 104px; max-height: 60px; }
+  .brand-button { min-height: 3.25rem; padding-inline: 1.25rem; font-size: .96rem; }
+  .hero-brand-glow { width: 70vw; height: 70vw; right: -18%; top: 28%; }
+  .video-plate__media { filter: brightness(1.15) contrast(.86) saturate(.84); -webkit-mask-image: radial-gradient(ellipse 82% 76% at 50% 50%, #000 42%, rgba(0,0,0,.9) 58%, transparent 94%); mask-image: radial-gradient(ellipse 82% 76% at 50% 50%, #000 42%, rgba(0,0,0,.9) 58%, transparent 94%); }
+}
+
+.globe-shell{position:relative;min-height:560px;display:grid;place-items:center;overflow:hidden;border-radius:2rem;background:radial-gradient(circle at 50% 42%,rgba(112,102,202,.22),transparent 38%),rgba(255,255,255,.035)}.globe-canvas{width:100%;height:560px;display:block;cursor:grab;touch-action:none}.globe-canvas:active{cursor:grabbing}.globe-orbit{position:absolute;width:78%;height:27%;border:1px solid rgba(255,255,255,.14);border-radius:50%;pointer-events:none;transform:rotate(-16deg)}.globe-orbit--one{box-shadow:0 0 40px rgba(255,204,1,.08)}.globe-orbit--two{width:64%;height:18%;transform:rotate(62deg);opacity:.55}.globe-caption{position:absolute;left:2rem;bottom:1.6rem;display:flex;flex-direction:column;gap:.25rem;pointer-events:none}.globe-caption__eyebrow{color:var(--color-brand-yellow);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.14em;font-size:.68rem}.globe-caption strong{color:#fff;font-family:var(--font-display);font-size:1.25rem}.globe-caption span:last-child{color:rgba(255,255,255,.55);font-size:.75rem}.globe-destination-chip{display:inline-flex;padding:.55rem .8rem;border:1px solid rgba(255,255,255,.18);border-radius:999px;color:rgba(255,255,255,.82);font-size:.75rem;transition:.2s ease}.globe-destination-chip:hover{background:var(--color-brand-yellow);color:var(--color-brand-purple);border-color:var(--color-brand-yellow)}
+
+.site-credit{display:inline-flex;align-items:baseline;gap:.35rem;color:rgba(57,49,134,.72);text-decoration:none;transition:color .2s ease,transform .2s ease}.site-credit span{font-family:var(--font-mono);font-size:.56rem;letter-spacing:.12em;text-transform:uppercase}.site-credit strong{font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-weight:500;font-size:1.05rem;line-height:1;color:var(--color-brand-purple)}.site-credit:hover{color:var(--color-brand-purple);transform:translateY(-1px)}
+@media (max-width:767px){.site-credit{align-self:flex-end}.site-credit strong{font-size:.98rem}}
+
+
+/* ================================================================
+   EMBASSY OF EDUCATION — BRAND SYSTEM
+   Palette sampled from the supplied official logo:
+   Purple #393186 · Yellow #FBD847 · Ivory #FFFFFA
+   ================================================================ */
+:root {
+  --eoe-purple: #393186;
+  --eoe-purple-deep: #302874;
+  --eoe-yellow: #FBD847;
+  --eoe-ivory: #FFFFFA;
+  --eoe-white: #FFFFFF;
+  --eoe-ink: #1B1849;
+  --eoe-muted: #6A667D;
+  --eoe-line: rgba(57,49,134,.14);
+}
+
+body { background: var(--eoe-ivory); color: var(--eoe-ink); }
+
+.brand-tint-purple { background: linear-gradient(180deg, #F4F2FC 0%, var(--eoe-ivory) 100%); }
+.brand-tint-yellow { background: linear-gradient(180deg, #FFF8D9 0%, var(--eoe-ivory) 100%); }
+.brand-panel-purple { background: var(--eoe-purple); color: var(--eoe-white); }
+.brand-button { background: var(--eoe-yellow); color: var(--eoe-purple); box-shadow: 0 12px 30px rgba(57,49,134,.16); }
+.brand-button:hover { background: var(--eoe-purple); color: var(--eoe-white); box-shadow: 0 16px 34px rgba(57,49,134,.24); }
+.eyebrow { color: var(--eoe-purple); }
+
+/* Reference-inspired hero: deep brand field, oversized editorial type, yellow CTA. */
+.hero-eoe {
+  background: var(--eoe-purple) !important;
+  color: var(--eoe-white);
+  min-height: 100svh;
+}
+.hero-eoe .hero-brand-glow { background: radial-gradient(circle, rgba(251,216,71,.16), rgba(57,49,134,.12) 48%, transparent 72%); }
+.hero-eoe .eyebrow { color: var(--eoe-yellow); }
+.hero-eoe h1 { color: var(--eoe-white) !important; letter-spacing: -.045em; }
+.hero-eoe .hero-copy { color: rgba(255,255,255,.72); }
+.hero-eoe .hero-secondary { color: rgba(255,255,255,.82); text-decoration-color: rgba(251,216,71,.48); }
+.hero-eoe .hero-secondary:hover { color: var(--eoe-yellow); }
+.hero-eoe .hero-scroll { color: rgba(255,255,255,.62); }
+.hero-eoe .hero-scroll-line { background: rgba(255,255,255,.34); }
+.hero-eoe .video-plate {
+  background: #fff;
+  border-radius: clamp(2.2rem, 6vw, 5rem);
+  box-shadow: 0 30px 80px rgba(20,14,62,.30);
+}
+.hero-eoe .video-plate__media {
+  mix-blend-mode: normal;
+  filter: none;
+  -webkit-mask-image: none;
+  mask-image: none;
+  object-fit: contain;
+}
+.hero-eoe .video-plate__feather { display: none; }
+.hero-eoe .video-plate__shadow { opacity: .55; background: radial-gradient(ellipse, rgba(57,49,134,.20), transparent 70%); }
+
+/* Dark editorial navigation on the hero, then a clean white floating bar after scroll. */
+.site-nav--hero { color: var(--eoe-white); }
+
+.site-nav--hero .nav-link { color: rgba(255,255,255,.76); }
+.site-nav--hero .nav-link:hover, .site-nav--hero .nav-link.is-active { color: var(--eoe-yellow); }
+.site-nav--hero .language-toggle { border-color: rgba(255,255,255,.20); background: rgba(255,255,255,.08); color: rgba(255,255,255,.72); }
+.site-nav--hero .language-toggle button.is-active { color: var(--eoe-purple); background: var(--eoe-yellow); }
+.site-nav--hero .nav-menu-button span { background: var(--eoe-white); }
+.site-nav--scrolled { background: rgba(255,255,250,.94) !important; box-shadow: 0 1px 0 var(--eoe-line), 0 12px 35px rgba(57,49,134,.06); }
+
+/* Brand blocks used throughout the inner pages. */
+.brand-section-dark { background: var(--eoe-purple); color: var(--eoe-white); }
+.brand-section-dark .eyebrow { color: var(--eoe-yellow); }
+.brand-section-dark .text-charcoal { color: rgba(255,255,255,.70); }
+.brand-section-dark .text-ink { color: var(--eoe-white); }
+.brand-section-dark .hairline { border-color: rgba(255,255,255,.16) !important; }
+
+/* Convert any legacy accent sections to the client's two-color system. */
+.section-mint, .section-coral, .section-violet { background: var(--eoe-ivory); }
+
+@media (max-width: 767px) {
+  .hero-eoe { padding-top: 7.5rem; padding-bottom: 5.5rem; }
+  .hero-eoe h1 { font-size: clamp(2.55rem, 12vw, 4.2rem); }
+  .hero-eoe .video-plate { border-radius: 2.1rem; }
+}
+
+/* ================================================================
+   MERIDIAN-INSPIRED EOE VISUAL SYSTEM
+   Reference palette sampled from the supplied design screenshot.
+   Purple: #3F1C54 · Yellow: #FFC800 · White: #FFFFFF
+   ================================================================ */
+:root {
+  --ref-purple: #3F1C54;
+  --ref-purple-deep: #2B123B;
+  --ref-purple-soft: #F5F0F7;
+  --ref-yellow: #FFC800;
+  --ref-yellow-soft: #FFF6CF;
+  --ref-ink: #24102F;
+  --ref-muted: #6E6473;
+  --ref-line: rgba(63,28,84,.14);
+}
+
+body { background: #fff; color: var(--ref-ink); }
+
+/* Re-map the existing utility theme to the new visual language. */
+.brand-tint-purple { background: linear-gradient(180deg, #F7F3F8 0%, #FFFFFF 100%) !important; }
+.brand-tint-yellow { background: linear-gradient(180deg, #FFF8DC 0%, #FFFFFF 100%) !important; }
+.brand-panel-purple { background: var(--ref-purple) !important; color: #fff; }
+.brand-panel-purple .eyebrow { color: var(--ref-yellow); }
+.brand-panel-purple .text-charcoal { color: rgba(255,255,255,.72); }
+.brand-panel-purple .text-ink { color: #fff; }
+
+.eyebrow { color: var(--ref-purple) !important; }
+.brand-button {
+  background: var(--ref-yellow) !important;
+  color: var(--ref-purple) !important;
+  box-shadow: 0 12px 28px rgba(63,28,84,.12) !important;
+}
+.brand-button:hover {
+  background: var(--ref-purple) !important;
+  color: #fff !important;
+  box-shadow: 0 16px 34px rgba(63,28,84,.20) !important;
+}
+.brand-text-link { color: var(--ref-purple) !important; text-decoration-color: rgba(63,28,84,.32) !important; }
+.brand-text-link:hover { color: var(--ref-purple-deep) !important; }
+
+/* Clean white hero matching the supplied reference instead of a full purple wash. */
+.hero-eoe {
+  background: #fff !important;
+  color: var(--ref-ink) !important;
+  min-height: 100svh;
+}
+.hero-eoe .hero-brand-glow {
+  background: radial-gradient(circle, rgba(255,200,0,.13), rgba(63,28,84,.06) 45%, transparent 72%);
+}
+.hero-eoe .eyebrow { color: var(--ref-purple) !important; }
+.hero-eoe h1 { color: var(--ref-purple) !important; letter-spacing: -.045em; }
+.hero-eoe .hero-copy { color: #554A5B !important; }
+.hero-eoe .hero-secondary { color: var(--ref-purple) !important; }
+.hero-eoe .hero-scroll { color: rgba(63,28,84,.70) !important; }
+.hero-eoe .hero-scroll .eyebrow { color: rgba(63,28,84,.70) !important; }
+.hero-eoe .hero-scroll-line { background: rgba(63,28,84,.34); }
+.hero-eoe .video-plate {
+  background: transparent;
+  border-radius: clamp(2rem, 6vw, 4.5rem);
+  box-shadow: none;
+  isolation: isolate;
+}
+/* Soft white cloud/haze around the footage so the video melts into the page instead of reading as a separate rectangle. */
+.hero-eoe .video-plate::before {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  inset: -8%;
+  pointer-events: none;
+  border-radius: 50%;
+  background:
+    radial-gradient(ellipse 48% 42% at 18% 50%, rgba(255,255,255,.98) 0 42%, rgba(255,255,255,.76) 58%, transparent 78%),
+    radial-gradient(ellipse 52% 45% at 82% 50%, rgba(255,255,255,.98) 0 40%, rgba(255,255,255,.72) 58%, transparent 80%),
+    radial-gradient(ellipse 72% 62% at 50% 50%, rgba(255,255,255,.98) 0 34%, rgba(246,245,247,.86) 57%, transparent 82%);
+  filter: blur(16px);
+}
+.hero-eoe .video-plate__media {
+  position: relative;
+  z-index: 1;
+  mix-blend-mode: multiply;
+  filter: brightness(1.05) contrast(.88) saturate(.86);
+  object-fit: contain;
+  -webkit-mask-image: radial-gradient(ellipse 76% 68% at 50% 50%, #000 35%, rgba(0,0,0,.96) 50%, rgba(0,0,0,.58) 68%, transparent 91%);
+  mask-image: radial-gradient(ellipse 76% 68% at 50% 50%, #000 35%, rgba(0,0,0,.96) 50%, rgba(0,0,0,.58) 68%, transparent 91%);
+}
+.hero-eoe .video-plate__feather {
+  display: block;
+  z-index: 2;
+  inset: -2%;
+  background:
+    radial-gradient(ellipse 42% 38% at 12% 50%, rgba(255,255,255,.98) 0 44%, rgba(255,255,255,.72) 63%, transparent 82%),
+    radial-gradient(ellipse 44% 40% at 88% 50%, rgba(255,255,255,.98) 0 44%, rgba(255,255,255,.72) 63%, transparent 84%),
+    radial-gradient(ellipse 72% 66% at 50% 50%, transparent 34%, rgba(255,255,255,.14) 55%, rgba(255,255,255,.68) 76%, #fff 95%);
+}
+.hero-eoe .video-plate__shadow {
+  opacity: .34;
+  z-index: 3;
+  background: radial-gradient(ellipse, rgba(63,28,84,.12), transparent 72%);
+}
+
+/* Header: white/cream like the reference, with purple navigation and yellow CTA. */
+.site-nav { color: var(--ref-purple); }
+.site-nav--hero { color: var(--ref-purple) !important; background: rgba(255,255,255,.90) !important; }
+.site-nav--hero .nav-link { color: rgba(63,28,84,.78) !important; }
+.site-nav--hero .nav-link:hover, .site-nav--hero .nav-link.is-active { color: var(--ref-purple) !important; }
+.site-nav--hero .language-toggle { border-color: rgba(63,28,84,.16); background: rgba(255,255,255,.78); color: rgba(63,28,84,.72); }
+.site-nav--hero .language-toggle button.is-active { color: #fff; background: var(--ref-purple); }
+.site-nav--hero .nav-menu-button span { background: var(--ref-purple) !important; }
+.site-nav--scrolled { background: rgba(255,255,255,.96) !important; box-shadow: 0 1px 0 var(--ref-line), 0 12px 35px rgba(63,28,84,.07); }
+
+/* More deliberate color rhythm: white → soft lavender → yellow → purple → white. */
+section.border-t.hairline:not(.brand-tint-purple):not(.brand-tint-yellow) { border-color: var(--ref-line) !important; }
+.brand-tint-purple .hairline, .brand-tint-yellow .hairline { border-color: var(--ref-line) !important; }
+
+/* Cards, destination grids and interactive states pick up the reference yellow. */
+.group:hover { --tw-ring-color: rgba(255,200,0,.18); }
+.hover\\:bg-brand-yellow-soft\\/60:hover { background: var(--ref-yellow-soft) !important; }
+.brand-accent-line::after { background: var(--ref-yellow) !important; }
+
+/* Dark process / CTA moments use the same deep purple as the reference. */
+.brand-panel-purple,
+.brand-section-dark { background: var(--ref-purple) !important; }
+.brand-panel-purple .process-step:hover { background: rgba(255,255,255,.07); }
+.brand-section-dark .eyebrow { color: var(--ref-yellow) !important; }
+.brand-section-dark .text-charcoal { color: rgba(255,255,255,.72) !important; }
+
+/* Globe remains a purple brand moment, with yellow destination markers. */
+.globe-shell { background: radial-gradient(circle at 50% 42%, rgba(255,200,0,.12), transparent 38%), var(--ref-purple) !important; }
+.globe-orbit { border-color: rgba(255,255,255,.15); }
+
+/* Form overlay follows the same purple/yellow system. */
+.form-aside { background: linear-gradient(145deg, var(--ref-purple-deep), var(--ref-purple) 68%, #4C2264) !important; }
+.form-submit { background: var(--ref-purple) !important; }
+.form-submit:hover { background: var(--ref-purple-deep) !important; }
+.form-submit b { background: var(--ref-yellow) !important; color: var(--ref-purple) !important; }
+
+/* Footer: strong purple field with yellow micro-accents, like the reference's dark editorial sections. */
+footer.brand-tint-purple {
+  background: var(--ref-purple) !important;
+  color: #fff !important;
+  border-color: rgba(255,255,255,.15) !important;
+}
+footer.brand-tint-purple .eyebrow { color: var(--ref-yellow) !important; }
+footer.brand-tint-purple .text-charcoal { color: rgba(255,255,255,.70) !important; }
+footer.brand-tint-purple a:hover { color: var(--ref-yellow) !important; }
+footer.brand-tint-purple .hairline { border-color: rgba(255,255,255,.16) !important; }
+footer.brand-tint-purple .site-credit { color: rgba(255,255,255,.60); }
+footer.brand-tint-purple .site-credit strong { color: var(--ref-yellow); }
+
+/* Original EOE logo is portrait/square, so give it enough vertical room without distortion. */
+.brand-mark__logo { width: auto !important; height: 68px !important; max-width: 68px; max-height: 68px !important; object-fit: contain; }
+.brand-mark--compact .brand-mark__logo { height: 58px !important; max-width: 58px; max-height: 58px !important; }
+@media (max-width: 767px) {
+  .brand-mark--compact .brand-mark__logo { height: 54px !important; max-width: 54px; max-height: 54px !important; }
+  .brand-mark__logo { height: 62px !important; max-width: 62px; max-height: 62px !important; }
+}

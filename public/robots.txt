@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://embassyofeducation.co.in/sitemap.xml
