@@ -35,7 +35,7 @@
       "@type": "MarketingAgency",
       "name": "BrandCrafters",
       "url": "https://brandcrafters.in",
-      "logo": "https://brandcrafters.in/logo.png",
+      "logo": "https://brandcrafters.in/assets/brandcrafters-logo.png",
       "description": "Social media marketing, brand promotion, and influencer marketing agency based in Vadodara, Gujarat, India.",
       "address": {
         "@type": "PostalAddress",
@@ -62,6 +62,8 @@
     </script>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/brandcrafters-mark.png">
+    <link rel="apple-touch-icon" href="assets/brandcrafters-mark.png">
     <style>
         * { margin:0; padding:0; box-sizing:border-box; }
         :root {
@@ -82,7 +84,7 @@
         /* Loader */
         .loader { position:fixed; inset:0; background:var(--bg); z-index:9999; display:flex; align-items:center; justify-content:center; flex-direction:column; transition:opacity 0.8s cubic-bezier(0.76,0,0.24,1),visibility 0.8s; }
         .loader.hidden { opacity:0; visibility:hidden; }
-        .loader-logo { font-family:'Instrument Serif',serif; font-size:clamp(2.5rem,6vw,4rem); color:var(--text); font-weight:400; letter-spacing:-0.03em; font-style:italic; opacity:0; animation:fadeIn 0.8s ease forwards 0.3s; }
+        .loader-logo { opacity:0; animation:fadeIn 0.8s ease forwards 0.3s; display:flex; justify-content:center; align-items:center; }
         .loader-bar { width:160px; height:1px; background:rgba(26,26,26,0.1); margin-top:2.5rem; overflow:hidden; }
         .loader-bar-fill { height:100%; background:var(--text); width:0%; animation:loadBar 1.8s cubic-bezier(0.76,0,0.24,1) forwards 0.5s; }
         @keyframes fadeIn { to { opacity:1; } }
@@ -92,6 +94,12 @@
         nav { position:fixed; top:0; left:0; right:0; z-index:1000; padding:1.25rem 2.5rem; display:flex; justify-content:space-between; align-items:center; transition:all 0.4s cubic-bezier(0.76,0,0.24,1); backdrop-filter:blur(20px) saturate(180%); background:rgba(244,237,228,0.72); border-bottom:1px solid transparent; }
         nav.scrolled { padding:0.85rem 2.5rem; border-bottom-color:var(--border); }
         .nav-logo { font-family:'Instrument Serif',serif; font-size:1.4rem; font-weight:400; color:var(--text); text-decoration:none; letter-spacing:-0.02em; font-style:italic; }
+        .brand-logo { display:block; width:auto; height:auto; object-fit:contain; }
+        .brand-logo--nav { width:132px; max-height:64px; }
+        .brand-logo--loader { width:min(300px,72vw); }
+        .brand-logo--footer { width:180px; max-width:100%; }
+        .footer-logo-wrap { margin:0 0 1rem; line-height:0; }
+
         .nav-links { display:flex; gap:2.5rem; align-items:center; list-style:none; }
         .nav-links a { color:var(--muted); text-decoration:none; font-size:0.82rem; font-weight:400; transition:color 0.3s ease; }
         .nav-links a:hover, .nav-links a.active { color:var(--text); }
@@ -329,6 +337,9 @@
             .stats-inner { grid-template-columns:repeat(2,1fr); }
         }
         @media (max-width:768px) {
+            .brand-logo--nav { width:100px; max-height:50px; }
+            .brand-logo--loader { width:min(240px,72vw); }
+            .brand-logo--footer { width:155px; }
             nav { padding:1rem 1.5rem; }
             .nav-links { display:none; }
             .menu-toggle { display:flex; }
@@ -350,13 +361,13 @@
 <body>
     <!-- Loader -->
     <div class="loader" id="loader">
-        <div class="loader-logo">BrandCrafters</div>
+        <div class="loader-logo"><img src="assets/brandcrafters-logo.png" alt="BrandCrafters" class="brand-logo brand-logo--loader"></div>
         <div class="loader-bar"><div class="loader-bar-fill"></div></div>
     </div>
 
     <!-- Nav -->
     <nav id="mainNav" role="navigation" aria-label="Main navigation">
-        <a href="index.html" class="nav-logo" aria-label="BrandCrafters Home">BrandCrafters</a>
+        <a href="index.html" class="nav-logo" aria-label="BrandCrafters Home"><img src="assets/brandcrafters-logo.png" alt="BrandCrafters" class="brand-logo brand-logo--nav"></a>
         <ul class="nav-links">
             <li><a href="index.html" class="active" aria-current="page">Home</a></li>
             <li><a href="services.html">Services</a></li>
@@ -670,7 +681,7 @@
     <footer>
         <div class="footer-main">
             <div class="footer-brand">
-                <h3>BrandCrafters</h3>
+                <h3 class="footer-logo-wrap"><img src="assets/brandcrafters-logo-footer.png" alt="BrandCrafters" class="brand-logo brand-logo--footer"></h3>
                 <p>We craft digital growth for businesses, brands, founders, and influencers. From visibility to inquiries, from content to collaborations.</p>
                 <p style="margin-top:1rem;font-size:0.78rem;color:rgba(244,237,228,0.4);">GF-15, Sharnam Fortune, Opp. Inox,<br>Beside Sterling Hospital, Race Course, Vadodara</p>
             </div>

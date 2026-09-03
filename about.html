@@ -18,6 +18,8 @@
     <meta property="og:description" content="The team and story behind Vadodara's leading social media marketing and brand promotion agency.">
     <meta property="og:site_name" content="BrandCrafters">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/brandcrafters-mark.png">
+    <link rel="apple-touch-icon" href="assets/brandcrafters-mark.png">
     <style>
         *{margin:0;padding:0;box-sizing:border-box;}
         :root{--bg:#f4ede4;--bg-alt:#ebe2d5;--bg-dark:#2a2520;--text:#1a1a1a;--text-light:#f4ede4;--muted:#6b6358;--accent:#c9542a;--border:rgba(26,26,26,0.1);}
@@ -29,6 +31,12 @@
         nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.25rem 2.5rem;display:flex;justify-content:space-between;align-items:center;transition:all 0.4s cubic-bezier(0.76,0,0.24,1);backdrop-filter:blur(20px) saturate(180%);background:rgba(244,237,228,0.72);border-bottom:1px solid transparent;}
         nav.scrolled{padding:0.85rem 2.5rem;border-bottom-color:var(--border);}
         .nav-logo{font-family:'Instrument Serif',serif;font-size:1.4rem;font-weight:400;color:var(--text);text-decoration:none;letter-spacing:-0.02em;font-style:italic;}
+        .brand-logo { display:block; width:auto; height:auto; object-fit:contain; }
+        .brand-logo--nav { width:132px; max-height:64px; }
+        .brand-logo--loader { width:min(300px,72vw); }
+        .brand-logo--footer { width:180px; max-width:100%; }
+        .footer-logo-wrap { margin:0 0 1rem; line-height:0; }
+
         .nav-links{display:flex;gap:2.5rem;align-items:center;list-style:none;}
         .nav-links a{color:var(--muted);text-decoration:none;font-size:0.82rem;font-weight:400;transition:color 0.3s ease;}
         .nav-links a:hover,.nav-links a.active{color:var(--text);}
@@ -211,7 +219,7 @@
 </head>
 <body>
     <nav id="mainNav">
-        <a href="index.html" class="nav-logo">BrandCrafters</a>
+        <a href="index.html" class="nav-logo"><img src="assets/brandcrafters-logo.png" alt="BrandCrafters" class="brand-logo brand-logo--nav"></a>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="services.html">Services</a></li>
@@ -450,7 +458,7 @@
     <footer>
         <div class="footer-main">
             <div class="footer-brand">
-                <h3>BrandCrafters</h3>
+                <h3 class="footer-logo-wrap"><img src="assets/brandcrafters-logo-footer.png" alt="BrandCrafters" class="brand-logo brand-logo--footer"></h3>
                 <p>We craft digital growth for businesses, brands, founders, and influencers. From visibility to inquiries, from content to collaborations.</p>
                 <p style="margin-top:1rem;font-size:0.78rem;color:rgba(244,237,228,0.4);">GF-15, Sharnam Fortune, Opp. Inox,<br>Beside Sterling Hospital, Race Course, Vadodara</p>
             </div>
