@@ -1,0 +1,15 @@
+{
+  "name": "Embassy of Education",
+  "short_name": "EOE",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F7F5FC",
+  "theme_color": "#392E8A",
+  "icons": [
+    {
+      "src": "assets/images/logo.png",
+      "sizes": "496x503",
+      "type": "image/png"
+    }
+  ]
+}
